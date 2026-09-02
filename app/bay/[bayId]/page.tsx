@@ -23,6 +23,15 @@ type BayPageProps = {
   params: Promise<{ bayId: string }>;
 };
 
+export async function generateMetadata({ params }: BayPageProps) {
+  const { bayId } = await params;
+  return {
+    title: formatBayId(bayId),
+    description:
+      "Pier East proof-area view showing public evidence context and the client-supplied layers needed for measured Worthing change monitoring."
+  };
+}
+
 function formatBayId(value: string) {
   return value
     .split("-")

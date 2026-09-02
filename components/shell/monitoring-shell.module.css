@@ -51,7 +51,8 @@
 .brand,
 .nav,
 .pills,
-.summaryDock {
+.summaryDock,
+.assetBadge {
   position: absolute;
   z-index: 1;
 }
@@ -238,6 +239,22 @@
   line-height: 1.48;
 }
 
+.assetBadge {
+  left: 132px;
+  bottom: 30px;
+  max-width: min(520px, calc(100% - 590px));
+  padding: 10px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 219, 155, 0.32);
+  background: rgba(56, 34, 9, 0.58);
+  color: #ffe8bd;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
 .main {
   width: min(1380px, calc(100% - 40px));
   margin: 0 auto;
@@ -369,6 +386,16 @@
     right: 20px;
     bottom: 20px;
     max-width: none;
+  }
+
+  .assetBadge {
+    left: 20px;
+    right: 20px;
+    bottom: 84px;
+    max-width: none;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.62rem;
   }
 
   .topLink {

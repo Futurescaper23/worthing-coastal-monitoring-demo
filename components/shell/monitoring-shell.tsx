@@ -77,21 +77,21 @@ const SHELL_STAGE = {
     eyebrow: "Full-frontage demonstrator",
     title: "Worthing Coastal Monitoring",
     summary:
-      "A public-data-led monitoring concept for the Worthing seafront, with one detailed proof area around Pier East and clear project-data boundaries.",
+      "A public-data-led monitoring demonstrator for the Worthing seafront, with one detailed proof area around Pier East and clear project-data boundaries.",
     image: shellIllustrations.home.image,
     alt: shellIllustrations.home.alt,
     pills: [
-      { label: "Mode", value: "Public-data review", subtext: "Client conversation version" },
+      { label: "Mode", value: "Public-data review", subtext: "Client preview version" },
       { label: "Focus", value: "Whole Worthing frontage", subtext: "Pier East proof nested inside" },
       { label: "Project data layer", value: projectMeta.criticalMissingLabel, subtext: "Client-supplied evidence layer" }
     ],
-    dock: "Hero shell aligned to the reference monitoring system: large stage image, floating left rail, and detail panels beneath."
+    dock: "Interface demonstration — representative visual, not project survey evidence."
   },
   "/scheme": {
     eyebrow: "Screen 1",
     title: "Scheme Overview",
     summary:
-      "Start with the whole frontage, show the public evidence base clearly, and identify where post-repair client data strengthens the proof-area discussion.",
+      "Whole-frontage orientation, public evidence coverage and the client-supplied post-repair layer needed for measured change.",
     image: shellIllustrations.scheme.image,
     alt: shellIllustrations.scheme.alt,
     pills: [
@@ -99,27 +99,27 @@ const SHELL_STAGE = {
       { label: "Work areas", value: "10 public areas", subtext: "West-to-east frontage ordering" },
       { label: "Client layer", value: projectMeta.criticalMissingLabel, subtext: "Required for measured change" }
     ],
-    dock: "Use this stage to orient the client first, then move down into the map, source basis, and evidence readiness."
+    dock: "Interface demonstration — representative visual, not project survey evidence."
   },
   "/bay/area-1-pier-east": {
     eyebrow: "Screen 2",
     title: "Pier East Proof Area",
     summary:
-      "A recognisable detailed view around Worthing Pier East that supports a concrete client conversation without implying verified groyne-performance evidence.",
+      "A recognisable detailed view around Worthing Pier East, separating public context from verified groyne-performance evidence.",
     image: shellIllustrations.bay.image,
     alt: shellIllustrations.bay.alt,
     pills: [
       { label: "Proof area", value: "Area 1 / Pier East", subtext: "Most recognisable first proof" },
       { label: "Evidence class", value: "Public context first", subtext: "Profile alignment still cautious" },
-      { label: "Missing layer", value: projectMeta.criticalMissingLabel, subtext: "Needed for stronger proof" }
+      { label: "Client layer", value: projectMeta.criticalMissingLabel, subtext: "Needed for measured change" }
     ],
-    dock: "The point of this screen is recognisability and credibility first, not an early engineering conclusion."
+    dock: "Interface demonstration — representative visual, not project survey evidence."
   },
   "/profiles": {
     eyebrow: "Screen 3",
     title: "Historical Profiles",
     summary:
-      "Show the analytical method and public route into Worthing profile evidence, with project-specific change evidence clearly separated.",
+      "Public CCO Worthing profile-report context and a cautious view of how cross-shore comparison would be presented.",
     image: shellIllustrations.profiles.image,
     alt: shellIllustrations.profiles.alt,
     pills: [
@@ -127,7 +127,7 @@ const SHELL_STAGE = {
       { label: "Red", value: "Erosion", subtext: "Material loss language only" },
       { label: "Evidence class", value: "Profile context", subtext: "Strengthened by survey surfaces" }
     ],
-    dock: "This is the method screen: persuasive when it is disciplined, risky if it overclaims."
+    dock: "Profile values shown are demonstration values until raw CCO profile data is ingested and verified."
   },
   "/conditions": {
     eyebrow: "Screen 4",
@@ -141,13 +141,13 @@ const SHELL_STAGE = {
       { label: "Weather", value: "Open-Meteo archive", subtext: "Rain, wind, pressure and temperature" },
       { label: "Tides", value: "WorldTides-ready", subtext: "Provider key enables live tide feed" }
     ],
-    dock: "Use this screen to explain whether survey/change windows were exposed, stormy, calm, wet or pressure-driven."
+    dock: "Weather uses Open-Meteo archive data; tide data is shown only when the WorldTides provider is connected."
   },
   "/timeline": {
     eyebrow: "Screen 5",
     title: "Timeline And Context",
     summary:
-      "Explain repair timing, public survey chronology, and nearby environmental context without pretending that chronology alone proves coastal response.",
+      "Repair timing, public survey chronology and nearby environmental context, kept separate from performance claims.",
     image: shellIllustrations.timeline.image,
     alt: shellIllustrations.timeline.alt,
     pills: [
@@ -155,27 +155,27 @@ const SHELL_STAGE = {
       { label: "Nearby context", value: "Arun Platform and Brighton", subtext: "Context only" },
       { label: "Quality rule", value: "Real-time is not QC", subtext: "Must stay explicitly labelled" }
     ],
-    dock: "This stage should frame timing and conditions, not smuggle in recommendation logic."
+    dock: "Chronology gives context only; it does not prove repair performance."
   },
   "/status": {
     eyebrow: "Screen 6",
-    title: "Status And Intent",
+    title: "Monitoring Readiness",
     summary:
-      "A status-style screen that feels operational, while staying honest that the public-data release does not yet have the inputs for intervention logic.",
+      "A readiness view showing public-data coverage, environmental context and the client-supplied layers needed for operational monitoring.",
     image: shellIllustrations.status.image,
     alt: shellIllustrations.status.alt,
     pills: [
-      { label: "What is ready", value: "Scheme framing", subtext: "Client conversation can start now" },
-      { label: "What is partial", value: "Proof area evidence", subtext: "Public route established" },
+      { label: "Public layer", value: "Scheme framing", subtext: "Ready for review" },
+      { label: "Profile layer", value: "Public route established", subtext: "Raw ingestion next" },
       { label: "Client layer", value: projectMeta.criticalMissingLabel, subtext: "Thresholds added when supplied" }
     ],
-    dock: "The right tone here is measured confidence, not faux operational certainty."
+    dock: "Readiness view only; operational status requires verified project datasets."
   },
   "/provenance": {
     eyebrow: "Screen 7",
     title: "Provenance And Uncertainty",
     summary:
-      "Make trust visible by showing sources, dates, quality notes, non-claims, and the exact client data needed to unlock the stronger version.",
+      "Sources, dates, quality notes, evidence boundaries and project-specific data requirements for the live monitoring version.",
     image: shellIllustrations.provenance.image,
     alt: shellIllustrations.provenance.alt,
     pills: [
@@ -183,7 +183,7 @@ const SHELL_STAGE = {
       { label: "Review stance", value: "Public-data review", subtext: "Not engineering assessment" },
       { label: "Client next step", value: "Supply project layers", subtext: "Enable stronger operational proof" }
     ],
-    dock: "This is the screen that proves the demo is serious about boundaries, not just good at visuals."
+    dock: "Evidence boundary: public-data review first; engineering assessment only when project data is supplied."
   }
 } as const;
 
@@ -250,6 +250,7 @@ export function MonitoringShell({ activePath, children }: MonitoringShellProps) 
           </div>
 
           <div className={styles.summaryDock}>{stage.dock}</div>
+          <div className={styles.assetBadge}>Interface demonstration — not project survey evidence</div>
         </div>
       </section>
 

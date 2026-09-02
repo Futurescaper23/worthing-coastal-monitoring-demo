@@ -11,6 +11,12 @@ import { dataRules, environmentContext, timelineContext, timelineEvents, timelin
 
 import styles from "@/app/inner-page.module.css";
 
+export const metadata = {
+  title: "Timeline And Context",
+  description:
+    "Worthing repair timing, public survey chronology and environmental context without performance overclaiming."
+};
+
 export default function TimelinePage() {
   return (
     <MonitoringShell activePath="/timeline">

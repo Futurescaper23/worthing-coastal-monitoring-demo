@@ -178,6 +178,32 @@
   line-height: 1.48;
 }
 
+.sourceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.sourceGrid article {
+  display: grid;
+  gap: 6px;
+  padding: 13px 15px;
+  border: 1px solid rgba(145, 202, 246, 0.12);
+  border-radius: 18px;
+  background: rgba(17, 29, 46, 0.72);
+}
+
+.sourceGrid strong {
+  color: var(--text-primary);
+  font-size: 0.78rem;
+}
+
+.sourceGrid span {
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  line-height: 1.42;
+}
+
 @media (max-width: 720px) {
   .chartIntro {
     display: grid;
@@ -188,7 +214,8 @@
   }
 
   .legend,
-  .chartNotes {
+  .chartNotes,
+  .sourceGrid {
     grid-template-columns: 1fr;
   }
 }

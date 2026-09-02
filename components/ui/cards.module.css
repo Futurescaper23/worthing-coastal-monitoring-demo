@@ -374,6 +374,27 @@
   gap: 10px;
 }
 
+.assetEvidenceBadge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  max-width: min(360px, calc(100% - 28px));
+  padding: 8px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 219, 155, 0.3);
+  background: rgba(46, 28, 8, 0.72);
+  color: #ffe8bd;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
+}
+
 .imageChipRow {
   display: flex;
   flex-wrap: wrap;

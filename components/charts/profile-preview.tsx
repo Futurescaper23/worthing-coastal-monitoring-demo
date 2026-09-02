@@ -53,14 +53,14 @@ export function ProfilePreview() {
     <div className={styles.chartWrap}>
       <div className={styles.chartIntro}>
         <div>
-          <p className={styles.eyebrow}>Illustrative profile method</p>
-          <h3>How cross-shore profile comparison is presented</h3>
+          <p className={styles.eyebrow}>Public profile method</p>
+          <h3>Sample cross-shore profile view</h3>
           <p>
-            This panel shows the intended profile-comparison view: shared height scale, cross-shore distance and where
-            beach levels appear higher or lower between survey epochs.
+            This panel shows the intended profile-comparison layout: shared elevation scale, cross-shore distance and
+            epoch-to-epoch difference. Values are demonstration values until raw CCO profile files are ingested.
           </p>
         </div>
-        <span className={styles.dataBadge}>Representative profile view</span>
+        <span className={styles.dataBadge}>Sample plot — raw values required</span>
       </div>
       <svg viewBox={`0 0 ${width} ${height}`} className={styles.chart} role="img" aria-label="Historical profile preview">
         <defs>
@@ -123,11 +123,10 @@ export function ProfilePreview() {
         <g className={styles.deltaCallout}>
           <rect x={deltaX + 16} y={Math.min(laterY, referenceY) - 32} width="162" height="48" rx="14" />
           <text x={deltaX + 30} y={Math.min(laterY, referenceY) - 12}>
-            Example height delta
+            Sample height delta
           </text>
           <text x={deltaX + 30} y={Math.min(laterY, referenceY) + 8}>
-            {deltaValue >= 0 ? "+" : ""}
-            {deltaValue.toFixed(2)}m example
+            Not measured evidence
           </text>
         </g>
       </svg>
@@ -143,8 +142,26 @@ export function ProfilePreview() {
         ))}
       </div>
       <div className={styles.chartNotes}>
-        <span>Shows method: shared vertical scale, profile shape and epoch-to-epoch height difference.</span>
-        <span>Measured repair impact would require verified CCO files, the client UAV baseline and agreed thresholds.</span>
+        <span>Confirmed public route: CCO 4dSU16 Worthing summary reports for March 2025 and March 2026.</span>
+        <span>Measured repair impact would require raw profile files, the client UAV baseline and agreed thresholds.</span>
+      </div>
+      <div className={styles.sourceGrid}>
+        <article>
+          <strong>Public source</strong>
+          <span>Channel Coastal Observatory reports catalogue</span>
+        </article>
+        <article>
+          <strong>Confirmed report epochs</strong>
+          <span>Mar 2025 and Mar 2026, 4dSU16 Worthing summary reports</span>
+        </article>
+        <article>
+          <strong>Datum / CRS</strong>
+          <span>To be confirmed during raw profile ingestion</span>
+        </article>
+        <article>
+          <strong>Checked</strong>
+          <span>2 Sep 2026</span>
+        </article>
       </div>
     </div>
   );

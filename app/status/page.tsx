@@ -4,6 +4,12 @@ import { missingDataLabel, statusCards, statusIllustrations, statusRows } from "
 
 import styles from "@/app/inner-page.module.css";
 
+export const metadata = {
+  title: "Monitoring Readiness",
+  description:
+    "Public-data coverage, client-supplied evidence layers and readiness for Worthing operational monitoring."
+};
+
 export default function StatusPage() {
   return (
     <MonitoringShell activePath="/status">
@@ -11,16 +17,16 @@ export default function StatusPage() {
         <Surface>
           <SectionHeading
             eyebrow="Screen 6"
-            title="Bay Status And Intervention Intent"
-            summary="This screen shows how a bay-level status view could separate current evidence, monitoring intent and the client-supplied thresholds needed for operational decisions."
+            title="Monitoring Readiness"
+            summary="This screen shows what can be reviewed from public evidence now, and which client-supplied layers are needed before it becomes an operational bay-status view."
           />
         </Surface>
 
         <Surface>
           <SectionHeading
-            eyebrow="Operational summary"
-            title="What can be shown now and what becomes project-specific"
-            summary="This keeps the status screen useful in a meeting by separating public framing from project-specific engineering evidence."
+            eyebrow="Readiness summary"
+            title="Public-data coverage and project-specific layers"
+            summary="The readiness view separates available public context from measured change, UAV baseline and engineering threshold layers."
           />
           <div style={{ height: 18 }} />
           <StatusCardGrid items={statusCards} />
@@ -28,9 +34,9 @@ export default function StatusPage() {
 
         <Surface>
           <SectionHeading
-            eyebrow="Operational visuals"
-            title="Inspection-ready imagery for the status story"
-            summary="This image set gives the status page a more operational tone while keeping the public-data and project-specific evidence boundaries visible."
+            eyebrow="Readiness visuals"
+            title="Inspection-style imagery for the monitoring story"
+            summary="This image set gives the page an operational feel while clearly labelling the visuals as interface demonstrations."
           />
           <div style={{ height: 18 }} />
           <IllustrationGallery items={statusIllustrations} eyebrow="Status illustration" />

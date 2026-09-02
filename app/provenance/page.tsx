@@ -12,6 +12,12 @@ import { clientAsk, datasetCatalogue, nonClaims, provenanceIllustrations, proven
 
 import styles from "@/app/inner-page.module.css";
 
+export const metadata = {
+  title: "Provenance And Uncertainty",
+  description:
+    "Worthing monitoring source register, evidence boundaries and project-specific data requirements."
+};
+
 export default function ProvenancePage() {
   return (
     <MonitoringShell activePath="/provenance">
@@ -27,7 +33,7 @@ export default function ProvenancePage() {
         <Surface>
           <SectionHeading
             eyebrow="Why this matters"
-            title="What the provenance screen proves in the meeting"
+            title="Source discipline and evidence boundaries"
             summary="The value of this page is not just compliance language. It shows source discipline, evidence boundaries and a practical route from public context to client-specific monitoring."
           />
           <div style={{ height: 18 }} />

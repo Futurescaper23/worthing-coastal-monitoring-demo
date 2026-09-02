@@ -5,7 +5,6 @@ import {
   SectionHeading,
   ScreenGrid,
   StatGrid,
-  StoryBeatGrid,
   Surface,
   VisualStoryPanel
 } from "@/components/ui/cards";
@@ -13,20 +12,23 @@ import {
   datasetReadiness,
   heroStats,
   homepageIllustrations,
-  meetingObjectives,
   nextActions,
   projectMeta,
-  screenCards,
-  storyBeats,
-  workAreas
+  screenCards
 } from "@/lib/site-data";
+
+export const metadata = {
+  title: "Worthing Coastal Monitoring Demonstrator",
+  description:
+    "FutureScaping client preview for a public-data-led Worthing coastal change monitoring system."
+};
 
 const homepageVisualStory = {
   lead: {
-    eyebrow: "Imagery-first opening",
-    title: "Lead with the frontage, not the feature list",
+    eyebrow: "Frontage orientation",
+    title: "Whole-frontage context",
     summary:
-      "The opening screen should immediately feel like a live coastal frontage under observation, with the client able to locate the pier, the scheme ends, and the proof-area focus before any deeper discussion.",
+      "The demonstrator starts with the full Worthing frontage so the pier, scheme ends and proof-area focus are clear before the detailed evidence view.",
     image: "/generated-images/worthing-map-derived-frontage-overview-illustration-v1.png",
     alt: "Illustrative Worthing seafront overview with visual monitoring callouts",
     fit: "contain",
@@ -38,20 +40,20 @@ const homepageVisualStory = {
     ]
   },
   detail: {
-    eyebrow: "Proof-area visual",
-    title: "Then zoom into a recognisable proof area",
+    eyebrow: "Proof-area view",
+    title: "Area 1 / Pier East",
     summary:
-      "Pier East is the place where the presentation can stop being abstract. This should feel like the moment the client sees where future change layers and monitoring outputs will actually land.",
+      "Pier East shows how public context, profile routes and client-supplied survey layers can meet in one recognisable monitoring view.",
     image: "/generated-images/worthing-pier-east-proof-illustration-v1.png",
     alt: "Illustrative Worthing Pier East proof area with monitoring overlays",
     chips: ["Area 1 / Pier East", "Public evidence route", "Future UAV insert point"],
     markers: []
   },
   insight: {
-    eyebrow: "Why it matters",
-    title: "How the stronger evidence layer is introduced",
+    eyebrow: "Evidence pathway",
+    title: "From public context to measured monitoring",
     summary:
-      "The opening view shows the product shape while keeping the evidence boundary clear. Public context is visible now, and client-supplied survey layers can be added without changing the story.",
+      "Public context is visible now, while client-supplied survey layers are clearly separated from measured change claims.",
     bullets: [
       "The frontage is presented as a recognisable place before detailed evidence is introduced.",
       "The proof area is separated from the whole-scheme overview.",
@@ -72,11 +74,6 @@ export default function HomePage() {
             title="Ready for the opening conversation"
             summary={`This web version presents a public-data-led Worthing monitoring concept in the style of the FutureScaping change-monitoring system. It is structured for an initial client review, with client-controlled survey layers clearly marked where they would strengthen the evidence. Last updated ${projectMeta.lastUpdated}.`}
           />
-          <ul style={{ margin: "18px 0 0", paddingLeft: 20, color: "var(--text-soft)", lineHeight: 1.8 }}>
-            {meetingObjectives.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </Surface>
 
         <StatGrid items={heroStats} />
@@ -107,52 +104,12 @@ export default function HomePage() {
 
         <Surface>
           <SectionHeading
-            eyebrow="Meeting story"
-            title="What this demo is designed to prove"
-            summary="The aim is to show how a Worthing monitoring interface could connect public context, proof-area detail, environmental conditions and client-supplied survey evidence."
-          />
-          <div style={{ height: 18 }} />
-          <StoryBeatGrid items={storyBeats} />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
             eyebrow="Client review screens"
             title="Review Structure"
             summary="Each screen supports a specific part of the client conversation: orientation, proof area, profiles, weather and tides, chronology, status and provenance."
           />
           <div style={{ height: 18 }} />
           <ScreenGrid items={screenCards} />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Work Areas"
-            title="Initial Frontage Catalogue"
-            summary="These are the public work areas in their current west-to-east frontage order, derived from the council overview plan and public updates rather than construction sequence assumptions."
-          />
-          <div
-            style={{
-              display: "grid",
-              gap: 12,
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              marginTop: 18
-            }}
-          >
-            {workAreas.map((area) => (
-              <article
-                key={area}
-                style={{
-                  padding: 16,
-                  borderRadius: 20,
-                  border: "1px solid rgba(150,205,250,.12)",
-                  background: "rgba(16, 28, 45, 0.72)"
-                }}
-              >
-                {area}
-              </article>
-            ))}
-          </div>
         </Surface>
 
         <Surface>
@@ -176,6 +133,14 @@ export default function HomePage() {
               <li key={action}>{action}</li>
             ))}
           </ul>
+        </Surface>
+
+        <Surface>
+          <SectionHeading
+            eyebrow="Next step"
+            title="Discuss a Pier East monitoring trial"
+            summary="A short technical review of Area 1 / Pier East would confirm source access, client UAV inputs, profile alignment and the practical route from this demonstrator to a live monitoring view."
+          />
         </Surface>
       </div>
     </MonitoringShell>

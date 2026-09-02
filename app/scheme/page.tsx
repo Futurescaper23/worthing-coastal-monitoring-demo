@@ -1,13 +1,7 @@
 import { MonitoringShell } from "@/components/shell/monitoring-shell";
 import {
-  AnchorGrid,
-  FactGrid,
-  DatasetCatalogueGrid,
-  EnvironmentContextPanel,
   EvidencePanelGrid,
-  IllustrationGallery,
   PlaceholderMap,
-  ReadinessGrid,
   SectionHeading,
   SourceRegisterGrid,
   StatGrid,
@@ -15,24 +9,25 @@ import {
   VisualStoryPanel
 } from "@/components/ui/cards";
 import {
-  datasetCatalogue,
-  datasetReadiness,
-  environmentContext,
   evidencePanels,
   heroStats,
   missingDataLabel,
-  schemeIllustrations,
-  schemeNarrative,
   schemeGeometry,
-  sourceRegister,
+  sourceRegister
 } from "@/lib/site-data";
 
 import styles from "@/app/inner-page.module.css";
 
+export const metadata = {
+  title: "Scheme Overview",
+  description:
+    "Worthing frontage overview, public work-area sequence, source basis and client-supplied data boundaries."
+};
+
 const schemeVisualStory = {
   lead: {
-    eyebrow: "Client opening frame",
-    title: "Use imagery to orient the whole scheme quickly",
+    eyebrow: "Frontage orientation",
+    title: "Worthing frontage overview",
     summary:
       "The overview opens with the recognisable seafront and then layers in scheme geography, work-area sequence and evidence boundaries.",
     image: "/generated-images/worthing-map-derived-frontage-overview-illustration-v1.png",
@@ -46,8 +41,8 @@ const schemeVisualStory = {
     ]
   },
   detail: {
-    eyebrow: "Evidence ladder",
-    title: "Show where the stronger layers will arrive",
+    eyebrow: "Proof-area pathway",
+    title: "Pier East evidence view",
     summary:
       "This secondary panel makes the data journey legible: public context, proof-area detail and the client-supplied baseline layer.",
     image: "/generated-images/worthing-pier-east-proof-illustration-v1.png",
@@ -56,13 +51,13 @@ const schemeVisualStory = {
     markers: []
   },
   insight: {
-    eyebrow: "Presentation value",
-    title: "Why this helps the client conversation",
+    eyebrow: "Monitoring value",
+    title: "What this view supports",
     summary:
-      "The layout makes place and monitoring intent visible before the client reads the explanatory sections below.",
+      "The layout makes the scheme geography, proof-area route and client-supplied evidence layer visible in one place.",
     bullets: [
-      "The scheme becomes a place the client can point at straight away.",
-      "The proof area feels like a destination, not just another route in the menu.",
+      "The full frontage is visible before detailed evidence is introduced.",
+      "Pier East is separated as the first proof-area view.",
       "The client baseline is framed as the next evidence layer rather than a buried caveat."
     ],
     callout:
@@ -87,8 +82,8 @@ export default function SchemePage() {
         <Surface>
           <SectionHeading
             eyebrow="Imagery-led framing"
-            title="What the client should understand before reading the detail"
-            summary="The page first lands as a recognisable frontage, then gives a clear route from scheme overview to proof area and future change evidence."
+            title="Whole-frontage evidence route"
+            summary="The page lands as a recognisable frontage, then gives a clear route from scheme overview to proof-area evidence."
           />
           <div style={{ height: 18 }} />
           <VisualStoryPanel
@@ -99,67 +94,7 @@ export default function SchemePage() {
         </Surface>
 
         <Surface>
-          <SectionHeading
-            eyebrow="Screen artwork"
-            title="A fuller visual set for the scheme conversation"
-            summary="These supporting visuals help explain the intended monitoring experience before approved project imagery or survey outputs are available."
-          />
-          <div style={{ height: 18 }} />
-          <IllustrationGallery items={schemeIllustrations} eyebrow="Scheme illustration" />
-        </Surface>
-
-        <Surface>
           <PlaceholderMap scheme={schemeGeometry} />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Frontage basis"
-            title="Public-source scheme extent"
-            summary="This frontage ordering is derived from the council scheme page and overview plan. It is suitable for orientation and client discussion, with detailed GIS tracing reserved for the live evidence layer."
-          />
-          <div style={{ height: 18 }} />
-          <FactGrid
-            items={[
-              ["Scheme title", schemeGeometry.scheme.title],
-              ["Public extent", schemeGeometry.scheme.extentDescription],
-              ["Work areas", `${schemeGeometry.scheme.workAreaCount} public areas in west-to-east frontage order`],
-              ["Geometry method", schemeGeometry.method]
-            ]}
-          />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Geographic anchors"
-            title="Approximate public coordinate control points"
-            summary="These public coordinate points ground the frontage trace for presentation and orientation. They are not presented as engineering survey control."
-          />
-          <div style={{ height: 18 }} />
-          <AnchorGrid items={schemeGeometry.anchors} />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Scheme framing"
-            title={schemeNarrative.headline}
-            summary={schemeNarrative.summary}
-          />
-          <ul className={styles.signalList} style={{ marginTop: 18 }}>
-            {schemeNarrative.principles.map((principle) => (
-              <li key={principle}>{principle}</li>
-            ))}
-          </ul>
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Dataset state"
-            title="Overview Data Layers"
-            summary="The overview separates the public sources already used from the client and survey layers that would support a live monitoring view."
-          />
-          <div style={{ height: 18 }} />
-          <ReadinessGrid items={datasetReadiness} />
         </Surface>
 
         <Surface>
@@ -170,26 +105,6 @@ export default function SchemePage() {
           />
           <div style={{ height: 18 }} />
           <EvidencePanelGrid items={evidencePanels} />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Dataset catalogue"
-            title="First ingestion targets"
-            summary="These are the concrete public and client-side datasets the interface is structured to accept."
-          />
-          <div style={{ height: 18 }} />
-          <DatasetCatalogueGrid items={datasetCatalogue} />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Environmental context"
-            title="Public stations already available for storyline context"
-            summary="These sources help explain weather and timing around surveys and repairs, but they do not substitute for measured scheme performance."
-          />
-          <div style={{ height: 18 }} />
-          <EnvironmentContextPanel context={environmentContext} />
         </Surface>
 
         <Surface>

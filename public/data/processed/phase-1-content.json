@@ -91,8 +91,8 @@
       "id": "status",
       "href": "/status",
       "eyebrow": "Screen 6",
-      "title": "Bay Status Panel",
-      "summary": "Operational framing with clear separation between current public context and project-specific thresholds.",
+      "title": "Monitoring Readiness",
+      "summary": "Public-data coverage, environmental context and project-specific layers required for operational status.",
       "status": "Client review screen"
     },
     {
@@ -268,7 +268,7 @@
     {
       "date": "2026-07",
       "title": "Capital maintenance repairs complete",
-      "detail": "Public sources say structural works completed in July 2026, establishing the moment the demonstration should treat as the transition into monitoring.",
+      "detail": "Public sources say structural works completed in July 2026, establishing the public transition point into monitoring.",
       "tone": "neutral"
     },
     {
@@ -305,23 +305,23 @@
     }
   ],
   "statusRows": [
-    ["Bay evidence state", "Public-data review"],
-    ["Recent forcing context", "Weather and tide route available"],
-    ["Profile signal", "Public CCO route identified"],
+    ["Public-data coverage", "Scheme extent and timing context"],
+    ["Environmental context", "Weather route active; tide provider prepared"],
+    ["Public profile route", "CCO 4dSU16 Worthing reports identified"],
     ["Measured post-repair change", "Client baseline layer"],
     ["Engineering threshold state", "Client-supplied thresholds"],
     ["Client unlock item", "July 2026 UAV baseline — client data required."]
   ],
   "statusCards": [
     {
-      "title": "Scheme framing",
+      "title": "Public-data coverage",
       "status": "Ready",
-      "detail": "Extent, work areas and public timing context can already support a client conversation."
+      "detail": "Extent, work areas and public timing context are ready for review."
     },
     {
-      "title": "Proof area evidence",
-      "status": "Project-specific layer",
-      "detail": "Pier East is defined and defensible; profile ingestion and asset alignment would strengthen the live view."
+      "title": "Profile and asset alignment",
+      "status": "Public route identified",
+      "detail": "Pier East is defined; raw profile ingestion and asset alignment would strengthen the live view."
     },
     {
       "title": "Measured post-repair monitoring",

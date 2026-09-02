@@ -5,6 +5,12 @@ import { missingDataLabel, profileCatalogue, profileIllustrations, profileSeries
 
 import styles from "@/app/inner-page.module.css";
 
+export const metadata = {
+  title: "Public Profile Context",
+  description:
+    "Public CCO Worthing profile-report context and cautious cross-shore profile comparison method."
+};
+
 export default function ProfilesPage() {
   return (
     <MonitoringShell activePath="/profiles">
@@ -12,8 +18,8 @@ export default function ProfilesPage() {
         <Surface>
           <SectionHeading
             eyebrow="Screen 3"
-            title="Historical Survey And Profile Comparison"
-            summary="This screen shows how historical profile evidence would be compared across survey epochs, while clearly separating public profile context from verified project-specific change evidence."
+            title="Public Profile Context"
+            summary="This screen confirms the public Worthing profile-report route and shows how raw profile files would be plotted once ingested and checked."
           />
         </Surface>
 
@@ -23,9 +29,9 @@ export default function ProfilesPage() {
 
         <Surface>
           <SectionHeading
-            eyebrow="Method imagery"
-            title="Visual support for the monitoring method"
-            summary="These visuals help explain where profile, observation and survey evidence sit within the wider monitoring story."
+            eyebrow="Method context"
+            title="Where profile evidence fits"
+            summary="These visuals support the method story only. They are not survey records or measured Worthing profile outputs."
           />
           <div style={{ height: 18 }} />
           <IllustrationGallery items={profileIllustrations} eyebrow="Profiles illustration" />
@@ -34,8 +40,8 @@ export default function ProfilesPage() {
         <Surface>
           <SectionHeading
             eyebrow="Public evidence route"
-            title="First CCO profile ingestion path"
-            summary="This is the first grounded route into public Worthing profile evidence. It identifies the source pathway and the quality checks needed before profile-derived interpretation is used in a live view."
+            title="Confirmed CCO Worthing report path"
+            summary="The public CCO reports catalogue confirms Worthing survey unit 4dSU16, including March 2025 and March 2026 summary reports. Raw chainage and elevation values still need verified ingestion before measured interpretation."
           />
           <div style={{ height: 18 }} />
           <ProfileCataloguePanel catalogue={profileCatalogue} />
@@ -44,8 +50,8 @@ export default function ProfilesPage() {
         <Surface>
           <SectionHeading
             eyebrow="How to read this"
-            title="Profile interpretation rules"
-            summary="This screen is built to show analytical discipline as much as visual polish."
+            title="Profile interpretation boundaries"
+            summary="The chart style is ready, but measured statements should wait for raw profile files, datum/CRS checks and project alignment."
           />
           <div style={{ height: 18 }} />
           <FactGrid

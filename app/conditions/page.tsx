@@ -4,6 +4,12 @@ import { SectionHeading, Surface } from "@/components/ui/cards";
 
 import styles from "@/app/inner-page.module.css";
 
+export const metadata = {
+  title: "Weather And Tides",
+  description:
+    "Worthing Pier weather, tide-provider readiness and survey-window context for coastal monitoring."
+};
+
 export default function ConditionsPage() {
   return (
     <MonitoringShell activePath="/conditions">
