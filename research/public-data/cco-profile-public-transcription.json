@@ -1,0 +1,36 @@
+{
+  "generatedContextDate": "2026-08-29",
+  "surveyUnit": {
+    "id": "4dSU16",
+    "title": "Worthing",
+    "latestPublicReportMonth": "Mar-26",
+    "latestPublicReportTitle": "SurveyReport_SU16_Summary_2026.pdf",
+    "previousPublicReportMonth": "Mar-25",
+    "previousPublicReportTitle": "SurveyReport_SU16_Summary_2025.pdf",
+    "sourceUrl": "https://coastalmonitoring.org/reports/"
+  },
+  "proofProfiles": [
+    {
+      "id": "4d00824",
+      "title": "Candidate Pier East profile 4d00824",
+      "status": "Candidate alignment",
+      "reason": "Named in the handover dossier as a historic shingle-placement context profile near the proof area.",
+      "evidenceClass": "Public profile candidate",
+      "nextAction": "Confirm public download route and exact alignment before any bay-specific claim."
+    },
+    {
+      "id": "4d00825",
+      "title": "Candidate Pier East profile 4d00825",
+      "status": "Candidate alignment",
+      "reason": "Named in the handover dossier as a second likely profile supporting the Pier East proof area.",
+      "evidenceClass": "Public profile candidate",
+      "nextAction": "Confirm public download route and exact alignment before any bay-specific claim."
+    }
+  ],
+  "ingestionRoute": {
+    "reportsCatalogueUrl": "https://coastalmonitoring.org/reports/",
+    "apiDocsUrl": "https://coastalmonitoring.org/ccoresources/api/",
+    "apiConstraint": "Official API documentation says requests require an API key and a referer header tied to the registered domain.",
+    "qualityRule": "Real-time records are not quality-controlled and must be labelled separately from historic validated survey evidence."
+  }
+}

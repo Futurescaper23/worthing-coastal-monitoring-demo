@@ -1,0 +1,194 @@
+.chartWrap {
+  display: grid;
+  gap: 18px;
+}
+
+.chartIntro {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.chartIntro h3,
+.chartIntro p {
+  margin: 0;
+}
+
+.chartIntro h3 {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.chartIntro p {
+  max-width: 58rem;
+  margin-top: 8px;
+  color: var(--text-soft);
+  line-height: 1.62;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dataBadge {
+  flex: 0 0 auto;
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 190, 114, 0.34);
+  border-radius: 999px;
+  background: rgba(95, 55, 20, 0.32);
+  color: #ffe1b9;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.chart {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(7, 16, 29, 0.94), rgba(10, 20, 35, 0.9));
+  border: 1px solid rgba(138, 199, 245, 0.12);
+}
+
+.gridLine {
+  stroke: rgba(151, 206, 250, 0.12);
+  stroke-width: 1;
+}
+
+.axisLine {
+  stroke: rgba(202, 230, 255, 0.26);
+  stroke-width: 1.2;
+}
+
+.axisText,
+.axisTitle {
+  fill: #b9cbdf;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.axisTitle {
+  fill: #dcefff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.seriesGain,
+.seriesLoss {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.seriesGain {
+  stroke: url(#gainStroke);
+}
+
+.seriesLoss {
+  stroke: url(#lossStroke);
+}
+
+.deltaLine {
+  stroke: rgba(255, 225, 185, 0.82);
+  stroke-width: 2;
+  stroke-dasharray: 4 4;
+}
+
+.deltaDotGain {
+  fill: #7edcff;
+}
+
+.deltaDotLoss {
+  fill: #ff7b85;
+}
+
+.deltaCallout rect {
+  fill: rgba(9, 18, 31, 0.86);
+  stroke: rgba(255, 225, 185, 0.32);
+}
+
+.deltaCallout text {
+  fill: #ffe1b9;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.deltaCallout text:first-of-type {
+  fill: #f6fbff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.legendItem {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(17, 29, 46, 0.72);
+  border: 1px solid rgba(145, 202, 246, 0.12);
+}
+
+.legendItem p {
+  margin: 4px 0 0;
+  color: var(--text-soft);
+}
+
+.legendSwatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+}
+
+.legendGain {
+  background: linear-gradient(180deg, #4bb3ff, #1d71d4);
+}
+
+.legendLoss {
+  background: linear-gradient(180deg, #ff7b85, #d43e49);
+}
+
+.chartNotes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.chartNotes span {
+  padding: 13px 15px;
+  border: 1px solid rgba(145, 202, 246, 0.12);
+  border-radius: 18px;
+  background: rgba(8, 18, 31, 0.56);
+  color: var(--text-soft);
+  line-height: 1.48;
+}
+
+@media (max-width: 720px) {
+  .chartIntro {
+    display: grid;
+  }
+
+  .dataBadge {
+    width: fit-content;
+  }
+
+  .legend,
+  .chartNotes {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: worthing-coastal-monitoring-demo
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start -- --port $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: 24.14.1
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false

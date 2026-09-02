@@ -1,0 +1,11 @@
+.next
+node_modules
+*.log
+.env
+.env.local
+.env.*.local
+out
+dist
+.codex-deps
+Images
+Screenshot*.png

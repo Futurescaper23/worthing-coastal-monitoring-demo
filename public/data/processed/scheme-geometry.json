@@ -1,0 +1,692 @@
+{
+  "generatedAt": "2026-08-29",
+  "method": "Approximate frontage trace derived from public landmark coordinates, the council works page and overview plan sequence. It is presentation-grade public geography, not engineering geometry.",
+  "scheme": {
+    "id": "worthing-capital-maintenance-phase-1",
+    "title": "Worthing Capital Maintenance Coastal Defence Project",
+    "lengthKm": 3.7,
+    "workAreaCount": 10,
+    "extentDescription": "Seaview Road in the west to Brooklands Park in the east",
+    "criticalMissingLabel": "July 2026 UAV baseline — client data required."
+  },
+  "sources": [
+    {
+      "id": "council-coastal-protection-page",
+      "title": "Coastal protection and management",
+      "url": "https://www.adur-worthing.gov.uk/seafront-and-river-adur/coastal-protection/",
+      "retrievedDate": "2026-08-28",
+      "notes": [
+        "Provides named work-area descriptions and project updates.",
+        "States the scheme runs from Seaview Road to Brooklands Park."
+      ]
+    },
+    {
+      "id": "council-overview-plan-pdf",
+      "title": "Worthing Coastal Protection Works - Capital Maintenance Scheme - Phase 1",
+      "url": "https://www.adur-worthing.gov.uk/media/Media,173410,smxx.pdf",
+      "retrievedDate": "2026-08-28",
+      "notes": [
+        "Overview plan used to confirm the west-to-east work-area sequence.",
+        "Map OCR indicates groyne labels across the frontage but is not reliable enough yet for final per-area GIS boundaries."
+      ]
+    },
+    {
+      "id": "seaview-road-postcode-source",
+      "title": "BN11 3QX open postcode geodata",
+      "url": "https://www.getthedata.com/postcode/BN11-3QX",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the Sea View Road scheme end.",
+        "Open postcode geography source used for demonstrator tracing only."
+      ]
+    },
+    {
+      "id": "worthing-lido-source",
+      "title": "Historic England listing reference for the Worthing Lido",
+      "url": "https://britishlistedbuildings.co.uk/101250795-the-lido-worthing-central-ward",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the Lido control point.",
+        "Coordinate is suitable for demonstrator anchoring, not engineering survey alignment."
+      ]
+    },
+    {
+      "id": "worthing-pier-source",
+      "title": "Worthing Pier location reference",
+      "url": "https://maps.apple.com/place?place-id=I84676A88B2DC5B05",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the pier control point.",
+        "Coordinate is suitable for demonstrator anchoring, not engineering survey alignment."
+      ]
+    },
+    {
+      "id": "warwick-road-source",
+      "title": "Warwick Road public coordinate reference",
+      "url": "https://www.streetmap.co.uk/street/WARWICK_ROAD_in_WORTHING_in_WEST_SUSSEX_in_BN11_626423_213695.htm",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the east end of Area 1.",
+        "Coordinate is suitable for demonstrator anchoring, not engineering survey alignment."
+      ]
+    },
+    {
+      "id": "denton-gardens-source",
+      "title": "Denton Gardens public coordinate reference",
+      "url": "https://mapcarta.com/W315739906",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the Area 6 start.",
+        "Coordinate is suitable for demonstrator anchoring, not engineering survey alignment."
+      ]
+    },
+    {
+      "id": "esplanade-source",
+      "title": "The Esplanade public coordinate reference",
+      "url": "https://www.streetlist.co.uk/bn/bn11/bn11-2/the-esplanade",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the Area 6 to Area 7 transition.",
+        "Coordinate is suitable for demonstrator anchoring, not engineering survey alignment."
+      ]
+    },
+    {
+      "id": "navarino-road-source",
+      "title": "Navarino Road public coordinate reference",
+      "url": "https://www.streetlist.co.uk/bn/bn11/bn11-2/navarino-road",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the Area 7 to Area 8 transition.",
+        "Coordinate is suitable for demonstrator anchoring, not engineering survey alignment."
+      ]
+    },
+    {
+      "id": "ophir-road-source",
+      "title": "Ophir Road public coordinate reference",
+      "url": "https://www.doogal.co.uk/ShowMap?postcode=BN11+2SR",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the Area 8 to Area 9 transition.",
+        "Coordinate is suitable for demonstrator anchoring, not engineering survey alignment."
+      ]
+    },
+    {
+      "id": "brougham-road-source",
+      "title": "Brougham Road public coordinate reference",
+      "url": "https://www.geograph.org.uk/photo/8208745",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the Area 9 to Area 10 transition.",
+        "Coordinate is suitable for demonstrator anchoring, not engineering survey alignment."
+      ]
+    },
+    {
+      "id": "brooklands-source",
+      "title": "Brooklands Park public coordinate reference",
+      "url": "https://group.rspb.org.uk/brighton/local-wild-places/brooklands-pleasure-park-lancing/",
+      "retrievedDate": "2026-08-29",
+      "notes": [
+        "Used as an approximate public coordinate reference for the Brooklands scheme end.",
+        "Park coordinate is a demonstrator endpoint reference rather than a surveyed seafront boundary."
+      ]
+    }
+  ],
+  "anchors": [
+    {
+      "id": "seaview-road",
+      "label": "Sea View Road",
+      "latitude": 50.80763,
+      "longitude": -0.388882,
+      "sourceId": "seaview-road-postcode-source",
+      "projected": {
+        "x": 0,
+        "y": 1
+      }
+    },
+    {
+      "id": "worthing-lido",
+      "label": "Worthing Lido",
+      "latitude": 50.809,
+      "longitude": -0.3728,
+      "sourceId": "worthing-lido-source",
+      "projected": {
+        "x": 0.294,
+        "y": 0.866
+      }
+    },
+    {
+      "id": "worthing-pier",
+      "label": "Worthing Pier",
+      "latitude": 50.8088,
+      "longitude": -0.3695,
+      "sourceId": "worthing-pier-source",
+      "projected": {
+        "x": 0.354,
+        "y": 0.886
+      }
+    },
+    {
+      "id": "warwick-road",
+      "label": "Warwick Road",
+      "latitude": 50.81134,
+      "longitude": -0.364667,
+      "sourceId": "warwick-road-source",
+      "projected": {
+        "x": 0.443,
+        "y": 0.637
+      }
+    },
+    {
+      "id": "denton-gardens",
+      "label": "Denton Gardens",
+      "latitude": 50.81134,
+      "longitude": -0.36401,
+      "sourceId": "denton-gardens-source",
+      "projected": {
+        "x": 0.455,
+        "y": 0.637
+      }
+    },
+    {
+      "id": "the-esplanade",
+      "label": "The Esplanade",
+      "latitude": 50.811875,
+      "longitude": -0.358729,
+      "sourceId": "esplanade-source",
+      "projected": {
+        "x": 0.551,
+        "y": 0.585
+      }
+    },
+    {
+      "id": "navarino-road",
+      "label": "Navarino Road",
+      "latitude": 50.813175,
+      "longitude": -0.352936,
+      "sourceId": "navarino-road-source",
+      "projected": {
+        "x": 0.657,
+        "y": 0.457
+      }
+    },
+    {
+      "id": "ophir-road",
+      "label": "Ophir Road",
+      "latitude": 50.814856,
+      "longitude": -0.348605,
+      "sourceId": "ophir-road-source",
+      "projected": {
+        "x": 0.736,
+        "y": 0.293
+      }
+    },
+    {
+      "id": "brougham-road",
+      "label": "Brougham Road",
+      "latitude": 50.81602,
+      "longitude": -0.34224,
+      "sourceId": "brougham-road-source",
+      "projected": {
+        "x": 0.853,
+        "y": 0.179
+      }
+    },
+    {
+      "id": "brooklands-park",
+      "label": "Brooklands Park",
+      "latitude": 50.817849,
+      "longitude": -0.334186,
+      "sourceId": "brooklands-source",
+      "projected": {
+        "x": 1,
+        "y": 0
+      }
+    }
+  ],
+  "coastlinePath": [
+    {
+      "x": 0,
+      "y": 0.76
+    },
+    {
+      "x": 0.294,
+      "y": 0.696
+    },
+    {
+      "x": 0.354,
+      "y": 0.705
+    },
+    {
+      "x": 0.443,
+      "y": 0.586
+    },
+    {
+      "x": 0.455,
+      "y": 0.586
+    },
+    {
+      "x": 0.551,
+      "y": 0.561
+    },
+    {
+      "x": 0.657,
+      "y": 0.499
+    },
+    {
+      "x": 0.736,
+      "y": 0.421
+    },
+    {
+      "x": 0.853,
+      "y": 0.366
+    },
+    {
+      "x": 1,
+      "y": 0.28
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "seaview-road",
+      "label": "Sea View Road",
+      "relativePosition": 0
+    },
+    {
+      "id": "worthing-pier",
+      "label": "Worthing Pier",
+      "relativePosition": 0.354
+    },
+    {
+      "id": "pier-east",
+      "label": "Pier East proof area",
+      "relativePosition": 0.443
+    },
+    {
+      "id": "brooklands",
+      "label": "Brooklands",
+      "relativePosition": 1
+    }
+  ],
+  "areas": [
+    {
+      "id": "area-5",
+      "label": "Area 5",
+      "publicTitle": "Area 5 - Lido to Seaview Road",
+      "name": "Lido to Seaview Road West",
+      "focus": "Public scheme context",
+      "status": "Public extent derived",
+      "proofCandidate": false,
+      "extentConfidence": "approximate",
+      "publicBasis": "Public title and west-to-east sequence derived from the council overview plan and works updates.",
+      "note": "This is the western third of the grouped public Lido-to-Seaview corridor until plan tracing is completed.",
+      "spatialOrder": 1,
+      "anchorStartId": "seaview-road",
+      "anchorEndId": "worthing-lido",
+      "relativeStart": 0,
+      "relativeEnd": 0.098,
+      "relativeWidth": 0.098,
+      "relativeMid": 0.049,
+      "labelRow": 0,
+      "geographicStart": {
+        "longitude": -0.388882,
+        "latitude": 50.80763,
+        "x": 0,
+        "y": 1
+      },
+      "geographicEnd": {
+        "longitude": -0.383526694,
+        "latitude": 50.80808621,
+        "x": 0.098,
+        "y": 0.955
+      },
+      "geographicMid": {
+        "longitude": -0.386204347,
+        "latitude": 50.807858105,
+        "x": 0.049,
+        "y": 0.978
+      }
+    },
+    {
+      "id": "area-4",
+      "label": "Area 4",
+      "publicTitle": "Area 4 - Lido to Seaview Road",
+      "name": "Lido to Seaview Road Central",
+      "focus": "Public scheme context",
+      "status": "Public extent derived",
+      "proofCandidate": false,
+      "extentConfidence": "approximate",
+      "publicBasis": "Public title and west-to-east sequence derived from the council overview plan and works updates.",
+      "note": "This is the central third of the grouped public Lido-to-Seaview corridor until plan tracing is completed.",
+      "spatialOrder": 2,
+      "anchorStartId": "seaview-road",
+      "anchorEndId": "worthing-lido",
+      "relativeStart": 0.098,
+      "relativeEnd": 0.196,
+      "relativeWidth": 0.098,
+      "relativeMid": 0.147,
+      "labelRow": 1,
+      "geographicStart": {
+        "longitude": -0.383526694,
+        "latitude": 50.80808621,
+        "x": 0.098,
+        "y": 0.955
+      },
+      "geographicEnd": {
+        "longitude": -0.378171388,
+        "latitude": 50.80854242,
+        "x": 0.196,
+        "y": 0.911
+      },
+      "geographicMid": {
+        "longitude": -0.380849041,
+        "latitude": 50.808314315,
+        "x": 0.147,
+        "y": 0.933
+      }
+    },
+    {
+      "id": "area-3",
+      "label": "Area 3",
+      "publicTitle": "Area 3 - Lido to Seaview Road",
+      "name": "Lido to Seaview Road East",
+      "focus": "Public scheme context",
+      "status": "Public extent derived",
+      "proofCandidate": false,
+      "extentConfidence": "approximate",
+      "publicBasis": "Public title and west-to-east sequence derived from the council overview plan and works updates.",
+      "note": "This is the eastern third of the grouped public Lido-to-Seaview corridor until plan tracing is completed.",
+      "spatialOrder": 3,
+      "anchorStartId": "seaview-road",
+      "anchorEndId": "worthing-lido",
+      "relativeStart": 0.196,
+      "relativeEnd": 0.294,
+      "relativeWidth": 0.098,
+      "relativeMid": 0.245,
+      "labelRow": 0,
+      "geographicStart": {
+        "longitude": -0.378171388,
+        "latitude": 50.80854242,
+        "x": 0.196,
+        "y": 0.911
+      },
+      "geographicEnd": {
+        "longitude": -0.3728,
+        "latitude": 50.809,
+        "x": 0.294,
+        "y": 0.866
+      },
+      "geographicMid": {
+        "longitude": -0.37548569400000004,
+        "latitude": 50.808771209999996,
+        "x": 0.245,
+        "y": 0.888
+      }
+    },
+    {
+      "id": "area-2",
+      "label": "Area 2",
+      "publicTitle": "Area 2 - Pier to the Lido",
+      "name": "Pier to the Lido",
+      "focus": "Public scheme context",
+      "status": "Public extent anchored",
+      "proofCandidate": false,
+      "extentConfidence": "medium",
+      "publicBasis": "Named directly on the council works updates page.",
+      "note": "Shown in west-to-east orientation for the demonstrator frontage.",
+      "spatialOrder": 4,
+      "anchorStartId": "worthing-lido",
+      "anchorEndId": "worthing-pier",
+      "relativeStart": 0.294,
+      "relativeEnd": 0.354,
+      "relativeWidth": 0.06,
+      "relativeMid": 0.324,
+      "labelRow": 1,
+      "geographicStart": {
+        "longitude": -0.3728,
+        "latitude": 50.809,
+        "x": 0.294,
+        "y": 0.866
+      },
+      "geographicEnd": {
+        "longitude": -0.3695,
+        "latitude": 50.8088,
+        "x": 0.354,
+        "y": 0.886
+      },
+      "geographicMid": {
+        "longitude": -0.37115,
+        "latitude": 50.808899999999994,
+        "x": 0.324,
+        "y": 0.876
+      }
+    },
+    {
+      "id": "area-1",
+      "label": "Area 1",
+      "publicTitle": "Area 1 - Warwick Road to the Pier",
+      "name": "Pier East / Warwick Road",
+      "focus": "Priority proof area",
+      "status": "Public extent anchored",
+      "proofCandidate": true,
+      "extentConfidence": "medium",
+      "publicBasis": "Named directly on the council works updates page, with public narrative confirming the repaired groyne immediately east of the pier.",
+      "note": "This is the Phase 1 proof candidate and remains subject to profile-to-groyne alignment checks.",
+      "spatialOrder": 5,
+      "anchorStartId": "worthing-pier",
+      "anchorEndId": "warwick-road",
+      "relativeStart": 0.354,
+      "relativeEnd": 0.443,
+      "relativeWidth": 0.089,
+      "relativeMid": 0.398,
+      "labelRow": 0,
+      "geographicStart": {
+        "longitude": -0.3695,
+        "latitude": 50.8088,
+        "x": 0.354,
+        "y": 0.886
+      },
+      "geographicEnd": {
+        "longitude": -0.364667,
+        "latitude": 50.81134,
+        "x": 0.443,
+        "y": 0.637
+      },
+      "geographicMid": {
+        "longitude": -0.3670835,
+        "latitude": 50.810069999999996,
+        "x": 0.398,
+        "y": 0.762
+      }
+    },
+    {
+      "id": "area-6",
+      "label": "Area 6",
+      "publicTitle": "Area 6 - Denton Gardens to the Esplanade",
+      "name": "Denton Gardens to the Esplanade",
+      "focus": "Public scheme context",
+      "status": "Public extent anchored",
+      "proofCandidate": false,
+      "extentConfidence": "medium",
+      "publicBasis": "Named directly on the council works updates page.",
+      "note": "Public extent traced by named frontage landmarks pending GIS digitisation.",
+      "spatialOrder": 6,
+      "anchorStartId": "denton-gardens",
+      "anchorEndId": "the-esplanade",
+      "relativeStart": 0.455,
+      "relativeEnd": 0.551,
+      "relativeWidth": 0.096,
+      "relativeMid": 0.503,
+      "labelRow": 1,
+      "geographicStart": {
+        "longitude": -0.36401,
+        "latitude": 50.81134,
+        "x": 0.455,
+        "y": 0.637
+      },
+      "geographicEnd": {
+        "longitude": -0.358729,
+        "latitude": 50.811875,
+        "x": 0.551,
+        "y": 0.585
+      },
+      "geographicMid": {
+        "longitude": -0.3613695,
+        "latitude": 50.8116075,
+        "x": 0.503,
+        "y": 0.611
+      }
+    },
+    {
+      "id": "area-7",
+      "label": "Area 7",
+      "publicTitle": "Area 7 - Esplanade to Navarino Road",
+      "name": "Esplanade to Navarino Road",
+      "focus": "Public scheme context",
+      "status": "Public extent anchored",
+      "proofCandidate": false,
+      "extentConfidence": "medium",
+      "publicBasis": "Named directly on the council works updates page.",
+      "note": "Public extent traced by named frontage landmarks pending GIS digitisation.",
+      "spatialOrder": 7,
+      "anchorStartId": "the-esplanade",
+      "anchorEndId": "navarino-road",
+      "relativeStart": 0.551,
+      "relativeEnd": 0.657,
+      "relativeWidth": 0.106,
+      "relativeMid": 0.604,
+      "labelRow": 0,
+      "geographicStart": {
+        "longitude": -0.358729,
+        "latitude": 50.811875,
+        "x": 0.551,
+        "y": 0.585
+      },
+      "geographicEnd": {
+        "longitude": -0.352936,
+        "latitude": 50.813175,
+        "x": 0.657,
+        "y": 0.457
+      },
+      "geographicMid": {
+        "longitude": -0.3558325,
+        "latitude": 50.812525,
+        "x": 0.604,
+        "y": 0.521
+      }
+    },
+    {
+      "id": "area-8",
+      "label": "Area 8",
+      "publicTitle": "Area 8 - Navarino Road to Ophir Road",
+      "name": "Navarino Road to Ophir Road",
+      "focus": "Public scheme context",
+      "status": "Public extent anchored",
+      "proofCandidate": false,
+      "extentConfidence": "medium",
+      "publicBasis": "Named directly on the council works updates page.",
+      "note": "Public extent traced by named frontage landmarks pending GIS digitisation.",
+      "spatialOrder": 8,
+      "anchorStartId": "navarino-road",
+      "anchorEndId": "ophir-road",
+      "relativeStart": 0.657,
+      "relativeEnd": 0.736,
+      "relativeWidth": 0.079,
+      "relativeMid": 0.697,
+      "labelRow": 1,
+      "geographicStart": {
+        "longitude": -0.352936,
+        "latitude": 50.813175,
+        "x": 0.657,
+        "y": 0.457
+      },
+      "geographicEnd": {
+        "longitude": -0.348605,
+        "latitude": 50.814856,
+        "x": 0.736,
+        "y": 0.293
+      },
+      "geographicMid": {
+        "longitude": -0.3507705,
+        "latitude": 50.8140155,
+        "x": 0.697,
+        "y": 0.375
+      }
+    },
+    {
+      "id": "area-9",
+      "label": "Area 9",
+      "publicTitle": "Area 9 - Ophir Road to Brougham Road",
+      "name": "Ophir Road to Brougham Road",
+      "focus": "Public scheme context",
+      "status": "Public extent anchored",
+      "proofCandidate": false,
+      "extentConfidence": "medium",
+      "publicBasis": "Named directly on the council works updates page.",
+      "note": "Public extent traced by named frontage landmarks pending GIS digitisation.",
+      "spatialOrder": 9,
+      "anchorStartId": "ophir-road",
+      "anchorEndId": "brougham-road",
+      "relativeStart": 0.736,
+      "relativeEnd": 0.853,
+      "relativeWidth": 0.117,
+      "relativeMid": 0.795,
+      "labelRow": 0,
+      "geographicStart": {
+        "longitude": -0.348605,
+        "latitude": 50.814856,
+        "x": 0.736,
+        "y": 0.293
+      },
+      "geographicEnd": {
+        "longitude": -0.34224,
+        "latitude": 50.81602,
+        "x": 0.853,
+        "y": 0.179
+      },
+      "geographicMid": {
+        "longitude": -0.34542249999999997,
+        "latitude": 50.815438,
+        "x": 0.795,
+        "y": 0.236
+      }
+    },
+    {
+      "id": "area-10",
+      "label": "Area 10",
+      "publicTitle": "Area 10 - Brougham Road to Brooklands",
+      "name": "Brougham Road to Brooklands",
+      "focus": "Public scheme context",
+      "status": "Public extent anchored",
+      "proofCandidate": false,
+      "extentConfidence": "medium",
+      "publicBasis": "Named directly on the council works updates page.",
+      "note": "Public extent traced by named frontage landmarks pending GIS digitisation.",
+      "spatialOrder": 10,
+      "anchorStartId": "brougham-road",
+      "anchorEndId": "brooklands-park",
+      "relativeStart": 0.853,
+      "relativeEnd": 1,
+      "relativeWidth": 0.147,
+      "relativeMid": 0.927,
+      "labelRow": 1,
+      "geographicStart": {
+        "longitude": -0.34224,
+        "latitude": 50.81602,
+        "x": 0.853,
+        "y": 0.179
+      },
+      "geographicEnd": {
+        "longitude": -0.334186,
+        "latitude": 50.817849,
+        "x": 1,
+        "y": 0
+      },
+      "geographicMid": {
+        "longitude": -0.338213,
+        "latitude": 50.8169345,
+        "x": 0.927,
+        "y": 0.09
+      }
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "project": {
+    "title": "Worthing Coastal Monitoring Demonstrator",
+    "subtitle": "Public-data-led scheme interpretation for an initial client review.",
+    "criticalMissingLabel": "July 2026 UAV baseline — client data required.",
+    "lastUpdated": "2026-08-28"
+  },
+  "heroStats": [
+    {
+      "label": "Scheme Length",
+      "value": "3.7 km",
+      "note": "Public scheme extent from Sea View Road to Brooklands."
+    },
+    {
+      "label": "Work Areas",
+      "value": "10",
+      "note": "Publicly described construction areas."
+    },
+    {
+      "label": "Proof Area",
+      "value": "Pier East",
+      "note": "Area 1 candidate subject to profile-to-groyne alignment."
+    },
+    {
+      "label": "Post-Works Layer",
+      "value": "Client Layer",
+      "note": "July 2026 UAV baseline — client data required."
+    }
+  ],
+  "meetingObjectives": [
+    "Show a credible FutureScaping-style monitoring product for Worthing using public evidence first.",
+    "Make the public evidence base useful immediately while clearly identifying client-controlled evidence layers.",
+    "Show how one proof area can expand into a fuller operational system when project datasets are supplied."
+  ],
+  "storyBeats": [
+    {
+      "title": "Public scheme context is already strong",
+      "summary": "We can already frame the full frontage, public work areas, repair timing and evidence coverage from live public sources."
+    },
+    {
+      "title": "Pier East is a sensible proof area",
+      "summary": "The frontage immediately east of Worthing Pier is recognisable, publicly referenced and well suited to a first demonstration bay."
+    },
+    {
+      "title": "Client data strengthens the evidence layer",
+      "summary": "The interface identifies the July 2026 UAV baseline as the project layer that would turn public context into measured post-repair monitoring."
+    }
+  ],
+  "screens": [
+    {
+      "id": "scheme",
+      "href": "/scheme",
+      "eyebrow": "Screen 1",
+      "title": "Scheme Overview",
+      "summary": "Full-frontage map, work areas, public-data coverage, and the client-supplied post-repair baseline layer.",
+      "status": "Client review screen"
+    },
+    {
+      "id": "bay-detail",
+      "href": "/bay/area-1-pier-east",
+      "eyebrow": "Screen 2",
+      "title": "Work Area Detail",
+      "summary": "Selected bay context, work-area geography, representative imagery and available public evidence.",
+      "status": "Client review screen"
+    },
+    {
+      "id": "profiles",
+      "href": "/profiles",
+      "eyebrow": "Screen 3",
+      "title": "Historical Profiles",
+      "summary": "Public profile overlays and the route toward project-specific measured change evidence.",
+      "status": "Client review screen"
+    },
+    {
+      "id": "conditions",
+      "href": "/conditions",
+      "eyebrow": "Screen 4",
+      "title": "Weather And Tides",
+      "summary": "Worthing-facing weather, tide and survey-window context copied from the monitoring-system concept.",
+      "status": "Client review screen"
+    },
+    {
+      "id": "timeline",
+      "href": "/timeline",
+      "eyebrow": "Screen 5",
+      "title": "Storm And Survey Timeline",
+      "summary": "Survey cadence, nearby forcing context, and validated-versus-live data treatment.",
+      "status": "Client review screen"
+    },
+    {
+      "id": "status",
+      "href": "/status",
+      "eyebrow": "Screen 6",
+      "title": "Bay Status Panel",
+      "summary": "Operational framing with clear separation between current public context and project-specific thresholds.",
+      "status": "Client review screen"
+    },
+    {
+      "id": "provenance",
+      "href": "/provenance",
+      "eyebrow": "Screen 7",
+      "title": "Provenance And Uncertainty",
+      "summary": "Source, licence, CRS, quality and evidence boundaries for the displayed datasets.",
+      "status": "Client review screen"
+    }
+  ],
+  "workAreas": [
+    "Area 5: Lido to Seaview Road West",
+    "Area 4: Lido to Seaview Road Central",
+    "Area 3: Lido to Seaview Road East",
+    "Area 2: Pier to the Lido",
+    "Area 1: Pier East / Warwick Road",
+    "Area 6: Denton Gardens to the Esplanade",
+    "Area 7: Esplanade to Navarino Road",
+    "Area 8: Navarino Road to Ophir Road",
+    "Area 9: Ophir Road to Brougham Road",
+    "Area 10: Brougham Road to Brooklands"
+  ],
+  "workAreaCards": [
+    {
+      "id": "area-1",
+      "label": "Area 1",
+      "name": "Warwick Road to Worthing Pier",
+      "focus": "Pier East proof area candidate",
+      "status": "Priority proof area",
+      "relativeStart": 0.05,
+      "relativeWidth": 0.14
+    },
+    {
+      "id": "area-2",
+      "label": "Area 2",
+      "name": "Worthing Pier to the Lido",
+      "focus": "Pier-to-Lido transition",
+      "status": "Public geometry route",
+      "relativeStart": 0.2,
+      "relativeWidth": 0.1
+    },
+    {
+      "id": "area-3-5",
+      "label": "Area 3-5",
+      "name": "Lido to Seaview Road",
+      "focus": "Grouped central-west frontage",
+      "status": "Public geometry route",
+      "relativeStart": 0.31,
+      "relativeWidth": 0.18
+    },
+    {
+      "id": "area-6",
+      "label": "Area 6",
+      "name": "Denton Gardens to the Esplanade",
+      "focus": "Mid-frontage context",
+      "status": "Public geometry route",
+      "relativeStart": 0.52,
+      "relativeWidth": 0.1
+    },
+    {
+      "id": "area-7",
+      "label": "Area 7",
+      "name": "Esplanade to Navarino Road",
+      "focus": "Mid-east frontage",
+      "status": "Public geometry route",
+      "relativeStart": 0.63,
+      "relativeWidth": 0.08
+    },
+    {
+      "id": "area-8",
+      "label": "Area 8",
+      "name": "Navarino Road to Ophir Road",
+      "focus": "Eastern frontage context",
+      "status": "Public geometry route",
+      "relativeStart": 0.72,
+      "relativeWidth": 0.08
+    },
+    {
+      "id": "area-9",
+      "label": "Area 9",
+      "name": "Ophir Road to Brougham Road",
+      "focus": "Eastern frontage context",
+      "status": "Public geometry route",
+      "relativeStart": 0.81,
+      "relativeWidth": 0.07
+    },
+    {
+      "id": "area-10",
+      "label": "Area 10",
+      "name": "Brougham Road to Brooklands",
+      "focus": "Scheme eastern end",
+      "status": "Public geometry route",
+      "relativeStart": 0.89,
+      "relativeWidth": 0.07
+    }
+  ],
+  "datasetReadiness": [
+    {
+      "title": "Scheme geometry",
+      "status": "Derived from public sources",
+      "detail": "The frontage sequence and approximate extents are derived from the public council works page and overview plan. Detailed GIS tracing would refine this for a live project."
+    },
+    {
+      "title": "Profile time series",
+      "status": "Public source route identified",
+      "detail": "CCO profiles for 4dSU16 provide the public route into cross-shore profile evidence. CRS/date verification is part of live ingestion."
+    },
+    {
+      "title": "Elevation context",
+      "status": "Public source route identified",
+      "detail": "Timestamped CCO or EA LiDAR tiles would provide wider elevation context when selected with clear licence and date metadata."
+    },
+    {
+      "title": "Post-repair baseline",
+      "status": "Client-supplied layer",
+      "detail": "The July 2026 UAV baseline would support measured post-repair change once supplied with metadata."
+    }
+  ],
+  "proofArea": {
+    "id": "area-1-pier-east",
+    "title": "Area 1 Pier East",
+    "summary": "The first detailed proof area is the frontage immediately east of Worthing Pier. It is framed as a recognisable public-data review area that can accept verified project evidence.",
+    "signals": [
+      "Profile-to-groyne alignment is identified as a project-specific evidence layer.",
+      "Repair type and exact groyne IDs would strengthen bay-level interpretation.",
+      "Historic context can be shown alongside clear measured-data boundaries."
+    ]
+  },
+  "proofFacts": [
+    [
+      "Why this bay",
+      "Public repair narrative, recognisable location, and a good fit for a focused proof-area conversation."
+    ],
+    [
+      "Public evidence available",
+      "Scheme pages, overview plan sequence, public timing context, and candidate CCO profiles."
+    ],
+    [
+      "Engineering caution",
+      "Exact repaired groyne IDs and profile-to-groyne alignment would be confirmed from project records."
+    ],
+    [
+      "Client unlock item",
+      "July 2026 UAV baseline — client data required."
+    ]
+  ],
+  "schemeNarrative": {
+    "headline": "A public-data-first shell for a repaired coastal-defence frontage",
+    "summary": "The first release helps Worthing stakeholders understand scheme extent, available public evidence, and the client baseline layer needed for measured post-repair performance.",
+    "principles": [
+      "Show the full scheme and one proof area clearly.",
+      "Keep provenance, dates, licence and CRS visible.",
+      "Use blue for gain/accretion and red for loss/erosion.",
+      "Treat profile-derived interpretation as contextual evidence until continuous surfaces are supplied."
+    ]
+  },
+  "profileSeries": [
+    {
+      "name": "Historic reference",
+      "date": "2017 context",
+      "points": [2.4, 2.6, 2.7, 2.5, 2.3, 2.1, 1.9, 1.6],
+      "interpretation": "Older publicly cited context for Pier East shingle placement, useful for story framing only."
+    },
+    {
+      "name": "Later public profile",
+      "date": "Pre-repair public epoch",
+      "points": [2.5, 2.8, 2.85, 2.65, 2.42, 2.18, 1.95, 1.62],
+      "interpretation": "Illustrative comparison curve showing how an ingested CCO profile series would be presented."
+    }
+  ],
+  "timelineEvents": [
+    {
+      "date": "2026-07",
+      "title": "Capital maintenance repairs complete",
+      "detail": "Public sources say structural works completed in July 2026, establishing the moment the demonstration should treat as the transition into monitoring.",
+      "tone": "neutral"
+    },
+    {
+      "date": "2026-07",
+      "title": "July 2026 UAV baseline — client data required.",
+      "detail": "This project layer would convert the public-data view into measured post-repair monitoring once supplied.",
+      "tone": "warning"
+    },
+    {
+      "date": "2027-09",
+      "title": "Possible shingle recycling window",
+      "detail": "Public materials indicate a future decision point if monitoring shows insufficient beach levels, but no threshold can be inferred from public sources.",
+      "tone": "loss"
+    },
+    {
+      "date": "2028-09",
+      "title": "Second possible recycling window",
+      "detail": "This remains future planning context and should only become recommendation logic when agreed thresholds are supplied.",
+      "tone": "gain"
+    }
+  ],
+  "timelineContext": [
+    {
+      "title": "Repair-to-monitoring transition",
+      "detail": "The review treats July 2026 as the public transition point from repair works into evidence-led monitoring, based on the council completion update dated 30 July 2026."
+    },
+    {
+      "title": "Public forcing context only",
+      "detail": "Nearby waves, tides and weather can be shown to explain timing windows, but they must remain contextual until station quality and relevance are validated."
+    },
+    {
+      "title": "Future intervention windows stay non-binding",
+      "detail": "Public references to later shingle recycling windows can support storyline planning, but not automated recommendations or threshold claims."
+    }
+  ],
+  "statusRows": [
+    ["Bay evidence state", "Public-data review"],
+    ["Recent forcing context", "Weather and tide route available"],
+    ["Profile signal", "Public CCO route identified"],
+    ["Measured post-repair change", "Client baseline layer"],
+    ["Engineering threshold state", "Client-supplied thresholds"],
+    ["Client unlock item", "July 2026 UAV baseline — client data required."]
+  ],
+  "statusCards": [
+    {
+      "title": "Scheme framing",
+      "status": "Ready",
+      "detail": "Extent, work areas and public timing context can already support a client conversation."
+    },
+    {
+      "title": "Proof area evidence",
+      "status": "Project-specific layer",
+      "detail": "Pier East is defined and defensible; profile ingestion and asset alignment would strengthen the live view."
+    },
+    {
+      "title": "Measured post-repair monitoring",
+      "status": "Client-supplied layer",
+      "detail": "The July 2026 UAV baseline and engineering thresholds would enable measured post-repair monitoring."
+    }
+  ],
+  "nonClaims": [
+    "No measured post-repair surface change claim.",
+    "No calculated post-repair volume claim.",
+    "No engineering threshold compliance claim.",
+    "No implied one-to-one repair-performance link until asset alignment is verified."
+  ],
+  "clientAsk": [
+    "July 2026 UAV baseline surface and metadata",
+    "Exact repaired groyne IDs and repair types",
+    "Operationally used recent profile files",
+    "Design beach profile, crest or threshold values",
+    "Any permitted as-built or licence drawings needed for proof alignment"
+  ],
+  "dataRules": [
+    "Nearby wave and tide feeds are context only unless a Worthing-specific source is confirmed or configured.",
+    "Real-time and provisional records must be visually distinct from quality-controlled history.",
+    "Event context can explain timing pressure without implying engineering causation."
+  ],
+  "nextActions": [
+    "Redraw public scheme geometry on a permitted baselayer for a live version.",
+    "Ingest and validate CCO profile series for the Pier East proof area.",
+    "Select timestamped elevation context layers with explicit date and licence metadata.",
+    "Attach source, date and quality metadata to every measured project layer."
+  ],
+  "evidencePanels": [
+    {
+      "title": "What we can show now",
+      "items": [
+        "Scheme extent from Sea View Road to Brooklands",
+        "Ten public work areas",
+        "Likely Pier East proof area",
+        "Public-source timing for repairs and future monitoring windows"
+      ]
+    },
+    {
+      "title": "What becomes project-specific",
+      "items": [
+        "Exact profile-to-groyne alignment",
+        "Any threshold-based intervention state",
+        "Any measured post-repair surface change",
+        "Any calculated post-repair volume change"
+      ]
+    }
+  ]
+}

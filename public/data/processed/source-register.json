@@ -1,0 +1,62 @@
+[
+  {
+    "id": "adur-worthing-coastal-protection",
+    "title": "Worthing capital maintenance coastal defence project page",
+    "type": "Scheme update",
+    "status": "Ready to ingest",
+    "url": "https://www.adur-worthing.gov.uk/seafront-and-river-adur/coastal-protection/",
+    "publisher": "Adur & Worthing Councils",
+    "dateNote": "Public page rechecked on 2026-08-28",
+    "whyItMatters": "Primary public source for scheme extent, area names, update chronology and the public statement that monitoring follows a recent UAV survey."
+  },
+  {
+    "id": "adur-worthing-july-2026-release",
+    "title": "Improved coastal defences will protect Worthing from the sea",
+    "type": "News release",
+    "status": "Ready to ingest",
+    "url": "https://www.adur-worthing.gov.uk/news/pr26-067.html",
+    "publisher": "Adur & Worthing Councils",
+    "dateNote": "Released on 2026-07-30",
+    "whyItMatters": "Confirms completion timing and supports the transition from repair works into the monitoring phase."
+  },
+  {
+    "id": "cco-reports",
+    "title": "Channel Coastal Observatory reports catalogue",
+    "type": "Monitoring catalogue",
+    "status": "Candidate profile source",
+    "url": "https://coastalmonitoring.org/reports/",
+    "publisher": "Channel Coastal Observatory",
+    "dateNote": "Catalogue checked on 2026-08-28",
+    "whyItMatters": "Primary public route into CCO survey-unit reporting, including Worthing survey references such as 4dSU16."
+  },
+  {
+    "id": "ea-worthing-environmental-notice",
+    "title": "Flood defences in Worthing, West Sussex",
+    "type": "Scheme context",
+    "status": "Ready to ingest",
+    "url": "https://www.gov.uk/government/publications/flood-defences-in-worthing-west-sussex/flood-defences-in-worthing-announcement-of-intention-not-to-prepare-an-environmental-statement",
+    "publisher": "Environment Agency / GOV.UK",
+    "dateNote": "Public page checked on 2026-08-28",
+    "whyItMatters": "Supports scheme narrative and the public context for flood-defence intent without implying post-repair performance."
+  },
+  {
+    "id": "ea-national-lidar",
+    "title": "National LiDAR Programme",
+    "type": "Elevation source",
+    "status": "Candidate context layer",
+    "url": "https://www.data.gov.uk/dataset/f0db0249-f17b-4036-9e65-309148c97ce4/national-lidar-programme",
+    "publisher": "Environment Agency / data.gov.uk",
+    "dateNote": "Dataset page checked on 2026-08-28",
+    "whyItMatters": "Public elevation context candidate for historical background layers where dates and tiles can be validated explicitly."
+  },
+  {
+    "id": "smp12-4d16",
+    "title": "SMP12 policy unit 4D16",
+    "type": "Policy context",
+    "status": "Ready to ingest",
+    "url": "https://environment.data.gov.uk/shoreline-planning/unit/SMP12/4D16",
+    "publisher": "Environment Agency",
+    "dateNote": "Policy unit checked on 2026-08-28",
+    "whyItMatters": "Public shoreline-policy context for Worthing frontage messaging, with hold-the-line framing."
+  }
+]

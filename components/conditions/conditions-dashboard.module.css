@@ -1,0 +1,309 @@
+.dashboard {
+  display: grid;
+  gap: 18px;
+}
+
+.hero,
+.insightGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+  gap: 18px;
+}
+
+.panel,
+.metric,
+.chartCard {
+  border: 1px solid rgba(150, 205, 250, 0.13);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(14, 29, 49, 0.92), rgba(9, 20, 34, 0.9));
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.24);
+}
+
+.panel {
+  padding: 22px;
+}
+
+.panel h2,
+.panel h3,
+.panel p,
+.metric p,
+.metric span,
+.metric strong {
+  margin: 0;
+}
+
+.panel h2,
+.panel h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.04em;
+}
+
+.panel h2 {
+  margin-top: 8px;
+  font-size: clamp(1.65rem, 2.7vw, 2.55rem);
+}
+
+.panel h3 {
+  margin-top: 8px;
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+}
+
+.panel p {
+  margin-top: 10px;
+  color: var(--text-soft);
+  line-height: 1.62;
+}
+
+.eyebrow {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(150, 205, 250, 0.13);
+  border-radius: 24px;
+  background: rgba(8, 18, 31, 0.62);
+}
+
+.controls label {
+  display: grid;
+  gap: 8px;
+}
+
+.controls span {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.controls input {
+  width: 100%;
+  border: 1px solid rgba(150, 205, 250, 0.15);
+  border-radius: 16px;
+  padding: 12px 13px;
+  background: rgba(13, 28, 48, 0.88);
+  color: var(--text-primary);
+}
+
+.statusText {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metric {
+  padding: 17px;
+}
+
+.metric p {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.metric strong {
+  display: block;
+  margin-top: 10px;
+  color: #f5fbff;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.metric span {
+  display: block;
+  margin-top: 8px;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chartCard {
+  overflow: hidden;
+  padding: 18px;
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.panelTitle h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: -0.04em;
+}
+
+.panelTitle span {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.chart {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(4, 12, 23, 0.82), rgba(7, 18, 31, 0.78)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 58px);
+}
+
+.gridLine {
+  stroke: rgba(180, 218, 248, 0.11);
+}
+
+.axisLine {
+  stroke: rgba(207, 230, 250, 0.24);
+  stroke-width: 1;
+}
+
+.axisText {
+  fill: #9fb5ce;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.axisLabel {
+  fill: #c9dcf0;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lineblue,
+.linepink,
+.linegold {
+  fill: none;
+  stroke-width: 2.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lineblue {
+  stroke: #56c7ff;
+}
+
+.linepink {
+  stroke: #fb7185;
+}
+
+.linegold {
+  stroke: #fbbf24;
+}
+
+.rainBar {
+  fill: rgba(86, 199, 255, 0.58);
+}
+
+.chartLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.chartLegend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.chartLegend i {
+  display: block;
+  width: 18px;
+  height: 4px;
+  border-radius: 999px;
+}
+
+.legendblue {
+  background: #56c7ff;
+}
+
+.legendpink {
+  background: #fb7185;
+}
+
+.legendgold {
+  background: #fbbf24;
+}
+
+.highTideDot {
+  fill: #fbbf24;
+}
+
+.lowTideDot {
+  fill: #34d399;
+}
+
+.emptyChart {
+  display: grid;
+  min-height: 210px;
+  place-items: center;
+  border: 1px dashed rgba(150, 205, 250, 0.18);
+  border-radius: 18px;
+  background: rgba(5, 13, 22, 0.52);
+  color: var(--text-soft);
+  text-align: center;
+}
+
+.warning {
+  border: 1px solid rgba(255, 190, 114, 0.28);
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: rgba(95, 55, 20, 0.28);
+  color: #ffe1b9 !important;
+}
+
+@media (max-width: 1080px) {
+  .hero,
+  .insightGrid,
+  .chartGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metricGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .controls,
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .panelTitle {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

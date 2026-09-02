@@ -1,0 +1,46 @@
+[
+  {
+    "id": "scheme",
+    "title": "Worthing scheme extent and work areas",
+    "source": "Adur & Worthing Councils public scheme material",
+    "date": "2026-07 to 2026-08 public pages",
+    "licence": "Public information; plan basemap copyright to be checked separately",
+    "crs": "To be assigned after geometry recreation",
+    "quality": "Authoritative for broad scope, not for engineering thresholds",
+    "status": "Public summary source",
+    "note": "Geometry should be redrawn on a permitted baselayer rather than copied from plan imagery."
+  },
+  {
+    "id": "profiles",
+    "title": "CCO profile series for 4dSU16",
+    "source": "Channel Coastal Observatory",
+    "date": "Historic and current public epochs; live ingestion route identified",
+    "licence": "To verify during download",
+    "crs": "To verify during download",
+    "quality": "Useful proxy evidence only until surface data arrives",
+    "status": "Public source route identified",
+    "note": "Profile-derived movement must not be presented as full-bay volumetric proof."
+  },
+  {
+    "id": "elevation",
+    "title": "Regional elevation context",
+    "source": "CCO and Environment Agency public LiDAR",
+    "date": "Timestamped public tiles selected per live project need",
+    "licence": "Open government / source-specific verification required",
+    "crs": "To verify per source",
+    "quality": "Contextual, not post-repair proof",
+    "status": "Public source route identified",
+    "note": "Composite surfaces must not be treated as before-and-after engineering evidence."
+  },
+  {
+    "id": "baseline",
+    "title": "July 2026 UAV baseline — client data required.",
+    "source": "Client / council project data",
+    "date": "2026-07",
+    "licence": "Client controlled",
+    "crs": "Unknown until supplied",
+    "quality": "High-value client-supplied layer",
+    "status": "Client-supplied layer",
+    "note": "Required before any measured post-repair surface or volume claim."
+  }
+]

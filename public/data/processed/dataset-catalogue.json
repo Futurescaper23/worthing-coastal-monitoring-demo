@@ -1,0 +1,68 @@
+[
+  {
+    "id": "scheme-plans",
+    "title": "Worthing work-area plans",
+    "category": "Scheme geometry",
+    "status": "Ready to derive",
+    "source": "Adur & Worthing Councils",
+    "coverage": "Ten public work areas",
+    "licence": "Plan imagery restricted; redraw geometry only",
+    "quality": "Good for extent and grouping, not for engineering thresholds",
+    "action": "Extract factual area extents onto a permitted baselayer."
+  },
+  {
+    "id": "cco-profiles",
+    "title": "CCO profile series for 4dSU16 / 4dMU8B",
+    "category": "Profiles",
+    "status": "Public source route identified",
+    "source": "Channel Coastal Observatory",
+    "coverage": "Worthing frontage profile lines",
+    "licence": "To verify during ingestion",
+    "quality": "High-value public proxy evidence",
+    "action": "In a live version, validate CRS/date metadata and map Pier East candidate lines."
+  },
+  {
+    "id": "public-lidar",
+    "title": "Timestamped elevation context",
+    "category": "Elevation",
+    "status": "Public source route identified",
+    "source": "CCO and Environment Agency",
+    "coverage": "Worthing and nearshore context",
+    "licence": "Verify per source",
+    "quality": "Context only until source lineage is checked",
+    "action": "Select timestamped tiles with licence and date metadata for contextual elevation."
+  },
+  {
+    "id": "environmental-context",
+    "title": "Wave, tide and met context",
+    "category": "Environmental forcing",
+    "status": "Weather route active",
+    "source": "CCO regional feeds",
+    "coverage": "Worthing Pier and nearby regional stations",
+    "licence": "Feed and API terms to verify",
+    "quality": "Useful context with provisional/validated split",
+    "action": "Keep live provisional records visually distinct from quality-controlled history."
+  },
+  {
+    "id": "asset-register",
+    "title": "Coastal asset context",
+    "category": "Assets",
+    "status": "Public source route identified",
+    "source": "CCO Coastal Defence Asset Register",
+    "coverage": "Groynes and frontage assets",
+    "licence": "To verify per extract",
+    "quality": "Potential bridge between public frontage and structure references",
+    "action": "Confirm whether public extracts are sufficient for non-sensitive scheme context."
+  },
+  {
+    "id": "uav-baseline",
+    "title": "July 2026 UAV baseline — client data required.",
+    "category": "Client evidence layer",
+    "status": "Client-supplied layer",
+    "source": "Council / client project data",
+    "coverage": "Post-repair baseline surface",
+    "licence": "Client controlled",
+    "quality": "Critical client-supplied layer",
+    "action": "Enables measured post-repair surface and volume comparison once supplied."
+  }
+]

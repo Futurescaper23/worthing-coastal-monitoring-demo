@@ -1,0 +1,55 @@
+{
+  "generatedContextDate": "2026-08-29",
+  "stations": [
+    {
+      "id": "worthing-pier-met",
+      "title": "Worthing Pier met station",
+      "type": "Met station",
+      "evidenceClass": "Local public context",
+      "location": "Worthing Pier",
+      "latitude": 50.807033,
+      "longitude": -0.3688,
+      "deployedDate": "2010-07-09",
+      "latestServiceNote": "The original instruments were replaced with a Vaisala WXT536 on 9 December 2022.",
+      "status": "Public context source confirmed",
+      "sourceUrl": "https://maps.coastalmonitoring.org/realtimedata/?chart=101&disp_option=1&tab=info",
+      "notes": [
+        "Public page says long-range graphs are from a randomised subsample and real-time data are not quality-controlled.",
+        "Useful as local environmental context for timeline framing, not as engineering proof."
+      ]
+    },
+    {
+      "id": "arun-platform",
+      "title": "Arun Platform",
+      "type": "Tide and met context",
+      "evidenceClass": "Nearby public context",
+      "location": "Arun Platform",
+      "deployedDate": "2008-05-28",
+      "status": "Nearby context source confirmed",
+      "sourceUrl": "https://maps.coastalmonitoring.org/realtimedata/",
+      "notes": [
+        "Listed by the public CCO realtime data page as a South East tides and met station.",
+        "Supports nearby context only and must not be presented as a Worthing tide gauge."
+      ]
+    },
+    {
+      "id": "brighton",
+      "title": "Brighton",
+      "type": "Tide and met context",
+      "evidenceClass": "Nearby public context",
+      "location": "Brighton",
+      "deployedDate": "2010-10-14",
+      "status": "Nearby context source confirmed",
+      "sourceUrl": "https://maps.coastalmonitoring.org/realtimedata/",
+      "notes": [
+        "Listed by the public CCO realtime data page as a South East tides and met station.",
+        "Supports nearby context only and must not be presented as a Worthing tide gauge."
+      ]
+    }
+  ],
+  "rules": [
+    "Real-time environmental records are not quality-controlled and must be labelled separately from validated survey evidence.",
+    "Worthing Pier can support local met context.",
+    "Arun Platform and Brighton are nearby context sources only."
+  ]
+}
