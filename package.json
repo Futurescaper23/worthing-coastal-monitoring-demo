@@ -9,7 +9,7 @@
     "build:profiles": "node scripts/build-profile-catalogue.mjs",
     "build:scheme": "node scripts/build-scheme-geometry.mjs",
     "build:sources": "node scripts/build-source-register.mjs",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
