@@ -53,16 +53,29 @@ type DashboardState =
       end: string;
     };
 
-function isoDate(date: Date) {
-  return date.toISOString().slice(0, 10);
-}
+const reviewWindows = [
+  {
+    label: "Current review window",
+    start: "2026-08-11",
+    end: "2026-09-01",
+    note: "Latest prepared client preview range"
+  },
+  {
+    label: "Works completion context",
+    start: "2026-07-15",
+    end: "2026-08-05",
+    note: "Weather context around public completion timing"
+  },
+  {
+    label: "Early summer baseline context",
+    start: "2026-06-15",
+    end: "2026-07-16",
+    note: "Longer pre-handover comparison window"
+  }
+];
 
 function defaultWindow() {
-  const end = new Date();
-  end.setDate(end.getDate() - 1);
-  const start = new Date(end);
-  start.setDate(start.getDate() - 21);
-  return { start: isoDate(start), end: isoDate(end) };
+  return { start: reviewWindows[0].start, end: reviewWindows[0].end };
 }
 
 function formatDate(value: string) {
@@ -347,20 +360,31 @@ function RainPressureChart({ labels, rain, pressure }: { labels: string[]; rain:
   );
 }
 
-function TideChart({ readings, extremes }: { readings: TideReading[]; extremes: TideExtreme[] }) {
+function TideChart({
+  readings,
+  extremes,
+  datum,
+  error
+}: {
+  readings: TideReading[];
+  extremes: TideExtreme[];
+  datum: string;
+  error?: string;
+}) {
   const width = 520;
   const height = 240;
   const values = readings.map((reading) => reading.value);
   const chartDomain = domain(values, true);
   const labels = readings.map((reading) => reading.time.slice(0, 10));
+  const hasLiveFeed = readings.length > 0 && !error;
 
   return (
     <article className={styles.chartCard}>
       <div className={styles.panelTitle}>
         <h3>Tide Height And Exposure</h3>
-        <span>{readings.length ? `${fmt(min(values), 2)}-${fmt(max(values), 2)} m` : "No tide feed"}</span>
+        <span>{hasLiveFeed ? `WorldTides live feed / ${datum}` : "Prepared tide display - sample values not shown"}</span>
       </div>
-      {readings.length ? (
+      {hasLiveFeed ? (
         <svg viewBox={`0 0 ${width} ${height}`} className={styles.chart} role="img" aria-label="Tide height and exposure">
           <ChartAxes labels={labels} minValue={chartDomain.min} maxValue={chartDomain.max} width={width} height={height} unit="m" />
           <path d={chartPath(values, width, height, chartDomain.min, chartDomain.max)} className={styles.lineblue} />
@@ -381,7 +405,11 @@ function TideChart({ readings, extremes }: { readings: TideReading[]; extremes: 
           })}
         </svg>
       ) : (
-        <div className={styles.emptyChart}>Tide chart is prepared for WorldTides data once the provider key is connected.</div>
+        <div className={styles.emptyChart}>
+          <strong>Prepared tide display</strong>
+          <span>Live tide heights will appear here when the WorldTides provider key is connected.</span>
+          <span>No tidal range or tide-height claim is being shown in this preview state.</span>
+        </div>
       )}
     </article>
   );
@@ -461,6 +489,8 @@ export function ConditionsDashboard() {
 
   const ready = state.status === "ready" ? state : null;
   const dailyTides = ready ? dailyTideRanges(ready.tideReadings) : [];
+  const selectedWindow =
+    reviewWindows.find((item) => item.start === dateWindow.start && item.end === dateWindow.end) ?? reviewWindows[0];
   const metrics = ready
     ? [
         ["Total Rainfall", `${fmt(sum(ready.weather.rain), 0)} mm`, "Across the selected Worthing window"],
@@ -470,12 +500,12 @@ export function ConditionsDashboard() {
         [
           "Storm-Like Days",
           `${ready.weather.labels.filter((_, index) => ready.weather.gustMax[index] >= 45 || ready.weather.rain[index] >= 15 || ready.weather.pressureMin[index] <= 995).length}`,
-          "Triggered by rain, gust or pressure"
+          "Rain >=15 mm, gust >=45 km/h or pressure <=995 hPa"
         ],
         [
           "Max Tidal Range",
-          ready.tideReadings.length ? `${fmt(max(dailyTides.map((item) => item.range)), 2)} m` : "Unavailable",
-          ready.tideError ? "WorldTides provider not connected" : `Referenced to ${ready.tideDatum}`
+          ready.tideReadings.length && !ready.tideError ? `${fmt(max(dailyTides.map((item) => item.range)), 2)} m` : "Not shown",
+          ready.tideError ? "WorldTides not connected in this preview" : `WorldTides live feed, ${ready.tideDatum}`
         ]
       ]
     : [];
@@ -494,31 +524,38 @@ export function ConditionsDashboard() {
         <article className={styles.panel}>
           <p className={styles.eyebrow}>Current view</p>
           <h2>{formatDate(dateWindow.start)} to {formatDate(dateWindow.end)}</h2>
-          <p>Weather uses Open-Meteo archive data. The tide panel is prepared for WorldTides once the provider key is connected.</p>
+          <p>
+            {selectedWindow.note}. Weather uses Open-Meteo archive data for the Worthing Pier point. Tide heights are only
+            labelled as live when WorldTides returns values.
+          </p>
         </article>
       </div>
 
       <div className={styles.controls}>
-        <label>
+        <div className={styles.locationBlock}>
           <span>Location</span>
-          <input value={WORTHING.name} readOnly />
-        </label>
-        <label>
-          <span>Start date</span>
-          <input
-            type="date"
-            value={dateWindow.start}
-            onChange={(event) => setDateWindow((current) => ({ ...current, start: event.target.value }))}
-          />
-        </label>
-        <label>
-          <span>End date</span>
-          <input
-            type="date"
-            value={dateWindow.end}
-            onChange={(event) => setDateWindow((current) => ({ ...current, end: event.target.value }))}
-          />
-        </label>
+          <strong>{WORTHING.name}</strong>
+          <small>{WORTHING.latitude.toFixed(4)}, {WORTHING.longitude.toFixed(4)}</small>
+        </div>
+        <div className={styles.windowPicker} aria-label="Survey-window options">
+          <span>Review window</span>
+          <div>
+            {reviewWindows.map((item) => {
+              const isActive = item.start === dateWindow.start && item.end === dateWindow.end;
+              return (
+                <button
+                  key={`${item.start}-${item.end}`}
+                  type="button"
+                  className={isActive ? styles.activeWindow : undefined}
+                  onClick={() => setDateWindow({ start: item.start, end: item.end })}
+                >
+                  <strong>{item.label}</strong>
+                  <small>{formatDate(item.start)} to {formatDate(item.end)}</small>
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
 
       {state.status !== "ready" ? (
@@ -540,7 +577,12 @@ export function ConditionsDashboard() {
           </div>
 
           <div className={styles.chartGrid}>
-            <TideChart readings={ready.tideReadings} extremes={ready.tideExtremes} />
+            <TideChart
+              readings={ready.tideReadings}
+              extremes={ready.tideExtremes}
+              datum={ready.tideDatum}
+              error={ready.tideError}
+            />
             <RainPressureChart labels={ready.weather.labels} rain={ready.weather.rain} pressure={ready.weather.pressureMin} />
             <MultiLineChart
               title="Wind Speed And Gust Profile"
@@ -576,9 +618,9 @@ export function ConditionsDashboard() {
                 calm weather, rainfall, or more energetic conditions.
               </p>
               <p>
-                {ready.tideReadings.length
+                {ready.tideReadings.length && !ready.tideError
                   ? `The largest daily tidal range in this window is approximately ${fmt(max(dailyTides.map((item) => item.range)), 2)} m, useful for explaining beach exposure and survey timing.`
-                  : "The tide panel is prepared for WorldTides data once the provider key is connected, so tidal context can sit alongside the weather readout."}
+                  : "The tide panel is prepared for WorldTides data once the provider key is connected. Until then, this page makes no tide-height or tidal-range claim."}
               </p>
             </article>
 

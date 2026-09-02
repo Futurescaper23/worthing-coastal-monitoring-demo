@@ -20,7 +20,7 @@ import {
 export const metadata = {
   title: "Worthing Coastal Monitoring Demonstrator",
   description:
-    "FutureScaping client preview for a public-data-led Worthing coastal change monitoring system."
+    "FutureScaping client preview for a public-data-led Worthing coastal monitoring demonstrator."
 };
 
 const homepageVisualStory = {
@@ -72,7 +72,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Client preview"
             title="Ready for the opening conversation"
-            summary={`This web version presents a public-data-led Worthing monitoring concept in the style of the FutureScaping change-monitoring system. It is structured for an initial client review, with client-controlled survey layers clearly marked where they would strengthen the evidence. Last updated ${projectMeta.lastUpdated}.`}
+            summary={`This web version presents a public-data-led Worthing monitoring demonstrator in the style of the FutureScaping change-monitoring product. It is structured for an initial client review, with client-controlled survey layers clearly marked where they would strengthen the evidence. Last updated ${projectMeta.lastUpdated}.`}
           />
         </Surface>
 
@@ -116,7 +116,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Readiness"
             title="Data Layers"
-            summary="The interface separates public evidence already used for the review from client-controlled layers that would make the system stronger in a live project."
+            summary="The interface separates public evidence already used for the review from client-controlled layers that would make a live product stronger."
           />
           <div style={{ height: 18 }} />
           <ReadinessGrid items={datasetReadiness} />

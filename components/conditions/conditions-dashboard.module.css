@@ -63,7 +63,7 @@
 
 .controls {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
   gap: 14px;
   padding: 18px;
   border: 1px solid rgba(150, 205, 250, 0.13);
@@ -71,7 +71,8 @@
   background: rgba(8, 18, 31, 0.62);
 }
 
-.controls label {
+.locationBlock,
+.windowPicker {
   display: grid;
   gap: 8px;
 }
@@ -84,13 +85,70 @@
   text-transform: uppercase;
 }
 
-.controls input {
-  width: 100%;
+.locationBlock {
+  border: 1px solid rgba(150, 205, 250, 0.15);
+  border-radius: 16px;
+  padding: 14px 15px;
+  background: rgba(13, 28, 48, 0.88);
+}
+
+.locationBlock strong {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.locationBlock small,
+.windowPicker small {
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+
+.windowPicker > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.windowPicker button {
   border: 1px solid rgba(150, 205, 250, 0.15);
   border-radius: 16px;
   padding: 12px 13px;
-  background: rgba(13, 28, 48, 0.88);
+  background: rgba(13, 28, 48, 0.78);
   color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.windowPicker button:hover,
+.windowPicker button:focus-visible {
+  border-color: rgba(102, 209, 255, 0.55);
+  background: rgba(20, 45, 76, 0.95);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.windowPicker button strong,
+.windowPicker button small {
+  display: block;
+}
+
+.windowPicker button strong {
+  margin-bottom: 5px;
+  font-size: 0.86rem;
+}
+
+.activeWindow {
+  border-color: rgba(102, 209, 255, 0.72) !important;
+  background:
+    linear-gradient(135deg, rgba(42, 119, 194, 0.42), rgba(10, 31, 53, 0.92)),
+    rgba(13, 28, 48, 0.9) !important;
+  box-shadow: 0 0 0 1px rgba(102, 209, 255, 0.14) inset;
 }
 
 .statusText {
@@ -267,6 +325,7 @@
 
 .emptyChart {
   display: grid;
+  gap: 8px;
   min-height: 210px;
   place-items: center;
   border: 1px dashed rgba(150, 205, 250, 0.18);
@@ -274,6 +333,18 @@
   background: rgba(5, 13, 22, 0.52);
   color: var(--text-soft);
   text-align: center;
+}
+
+.emptyChart strong {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.emptyChart span {
+  display: block;
+  max-width: 420px;
+  line-height: 1.45;
 }
 
 .warning {
@@ -299,6 +370,10 @@
 @media (max-width: 720px) {
   .controls,
   .metricGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .windowPicker > div {
     grid-template-columns: 1fr;
   }
 

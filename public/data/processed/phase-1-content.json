@@ -30,7 +30,7 @@
   "meetingObjectives": [
     "Show a credible FutureScaping-style monitoring product for Worthing using public evidence first.",
     "Make the public evidence base useful immediately while clearly identifying client-controlled evidence layers.",
-    "Show how one proof area can expand into a fuller operational system when project datasets are supplied."
+    "Show how one proof area can expand into a fuller operational product when project datasets are supplied."
   ],
   "storyBeats": [
     {
@@ -76,7 +76,7 @@
       "href": "/conditions",
       "eyebrow": "Screen 4",
       "title": "Weather And Tides",
-      "summary": "Worthing-facing weather, tide and survey-window context copied from the monitoring-system concept.",
+      "summary": "Worthing-facing weather, tide and survey-window context adapted from the monitoring-product concept.",
       "status": "Client review screen"
     },
     {
@@ -252,16 +252,16 @@
   },
   "profileSeries": [
     {
-      "name": "Historic reference",
-      "date": "2017 context",
+      "name": "Display sample A",
+      "date": "Example profile shape only",
       "points": [2.4, 2.6, 2.7, 2.5, 2.3, 2.1, 1.9, 1.6],
-      "interpretation": "Older publicly cited context for Pier East shingle placement, useful for story framing only."
+      "interpretation": "Demonstration curve showing how a checked CCO or project profile would be displayed."
     },
     {
-      "name": "Later public profile",
-      "date": "Pre-repair public epoch",
+      "name": "Display sample B",
+      "date": "Example comparison shape only",
       "points": [2.5, 2.8, 2.85, 2.65, 2.42, 2.18, 1.95, 1.62],
-      "interpretation": "Illustrative comparison curve showing how an ingested CCO profile series would be presented."
+      "interpretation": "Illustrative comparison curve only. It should be replaced by ingested raw CCO profile values before any measured statement is made."
     }
   ],
   "timelineEvents": [

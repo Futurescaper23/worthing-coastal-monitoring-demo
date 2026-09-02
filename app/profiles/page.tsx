@@ -19,7 +19,7 @@ export default function ProfilesPage() {
           <SectionHeading
             eyebrow="Screen 3"
             title="Public Profile Context"
-            summary="This screen confirms the public Worthing profile-report route and shows how raw profile files would be plotted once ingested and checked."
+            summary="This screen confirms the public Worthing profile-report route and shows the intended profile display format. The plotted lines are sample values only, not measured CCO outputs."
           />
         </Surface>
 
@@ -51,14 +51,14 @@ export default function ProfilesPage() {
           <SectionHeading
             eyebrow="How to read this"
             title="Profile interpretation boundaries"
-            summary="The chart style is ready, but measured statements should wait for raw profile files, datum/CRS checks and project alignment."
+            summary="The chart style is ready, but measured statements should wait for raw CCO profile values, datum/CRS checks, project alignment and the client baseline surface."
           />
           <div style={{ height: 18 }} />
           <FactGrid
             items={[
               ["Blue", "Material gain or accretion language only, not a post-repair proof label."],
               ["Red", "Material loss or erosion language only, not a failure trigger."],
-              ["Current evidence class", "Historic public-profile proxy evidence."],
+              ["Current evidence class", "Confirmed public report route plus display-format sample."],
               ["Project-specific layer", "Ingested CCO profiles, client baseline surface and agreed thresholds."]
             ]}
           />

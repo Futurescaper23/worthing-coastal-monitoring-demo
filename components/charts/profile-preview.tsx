@@ -57,10 +57,10 @@ export function ProfilePreview() {
           <h3>Sample cross-shore profile view</h3>
           <p>
             This panel shows the intended profile-comparison layout: shared elevation scale, cross-shore distance and
-            epoch-to-epoch difference. Values are demonstration values until raw CCO profile files are ingested.
+            epoch-to-epoch difference. No measured CCO elevation values are plotted in this preview.
           </p>
         </div>
-        <span className={styles.dataBadge}>Sample plot — raw values required</span>
+        <span className={styles.dataBadge}>Display-format example - raw values required</span>
       </div>
       <svg viewBox={`0 0 ${width} ${height}`} className={styles.chart} role="img" aria-label="Historical profile preview">
         <defs>
@@ -142,6 +142,7 @@ export function ProfilePreview() {
         ))}
       </div>
       <div className={styles.chartNotes}>
+        <span>No measured Worthing profile result is claimed from these sample lines.</span>
         <span>Confirmed public route: CCO 4dSU16 Worthing summary reports for March 2025 and March 2026.</span>
         <span>Measured repair impact would require raw profile files, the client UAV baseline and agreed thresholds.</span>
       </div>

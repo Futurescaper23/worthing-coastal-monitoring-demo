@@ -65,7 +65,7 @@ export default function ProvenancePage() {
           <SectionHeading
             eyebrow="Ingestion queue"
             title="Dataset catalogue"
-            summary="This is the data checklist behind the provenance model, showing which sources support the current review and which project layers would strengthen the live system."
+            summary="This is the data checklist behind the provenance model, showing which sources support the current review and which project layers would strengthen a live product."
           />
           <div style={{ height: 18 }} />
           <DatasetCatalogueGrid items={datasetCatalogue} />

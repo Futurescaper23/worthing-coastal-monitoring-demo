@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Worthing Coastal Monitoring Demonstrator",
     description:
-      "A FutureScaping client preview for a public-data-led Worthing coastal change monitoring system.",
+      "A FutureScaping client preview for a public-data-led Worthing coastal monitoring demonstrator.",
     type: "website",
     siteName: "FutureScaping",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Worthing Coastal Monitoring Demonstrator",
     description:
-      "A FutureScaping client preview for a public-data-led Worthing coastal change monitoring system.",
+      "A FutureScaping client preview for a public-data-led Worthing coastal monitoring demonstrator.",
     images: ["/generated-images/worthing-wide-frontage-overview-illustration-v1.png"]
   }
 };
