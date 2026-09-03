@@ -17,9 +17,9 @@ export default function ProfilesPage() {
       <div className={styles.pageStack}>
         <Surface>
           <SectionHeading
-            eyebrow="Screen 3"
+            eyebrow="Profile context"
             title="Public Profile Context"
-            summary="This screen confirms the public Worthing profile-report route and shows the intended profile display format. The plotted lines are sample values only, not measured CCO outputs."
+            summary="The public Worthing profile-report route is confirmed. The plotted lines show the intended display format only and are not measured CCO outputs."
           />
         </Surface>
 

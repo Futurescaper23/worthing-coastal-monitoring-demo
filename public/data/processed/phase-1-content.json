@@ -50,7 +50,7 @@
     {
       "id": "scheme",
       "href": "/scheme",
-      "eyebrow": "Screen 1",
+      "eyebrow": "Scheme extent",
       "title": "Scheme Overview",
       "summary": "Full-frontage map, work areas, public-data coverage, and the client-supplied post-repair baseline layer.",
       "status": "Client review screen"
@@ -58,7 +58,7 @@
     {
       "id": "bay-detail",
       "href": "/bay/area-1-pier-east",
-      "eyebrow": "Screen 2",
+      "eyebrow": "Pier East focus",
       "title": "Work Area Detail",
       "summary": "Selected bay context, work-area geography, representative imagery and available public evidence.",
       "status": "Client review screen"
@@ -66,7 +66,7 @@
     {
       "id": "profiles",
       "href": "/profiles",
-      "eyebrow": "Screen 3",
+      "eyebrow": "Profile context",
       "title": "Historical Profiles",
       "summary": "Public profile overlays and the route toward project-specific measured change evidence.",
       "status": "Client review screen"
@@ -74,7 +74,7 @@
     {
       "id": "conditions",
       "href": "/conditions",
-      "eyebrow": "Screen 4",
+      "eyebrow": "Environmental context",
       "title": "Weather And Tides",
       "summary": "Worthing-facing weather, tide and survey-window context adapted from the monitoring-product concept.",
       "status": "Client review screen"
@@ -82,7 +82,7 @@
     {
       "id": "timeline",
       "href": "/timeline",
-      "eyebrow": "Screen 5",
+      "eyebrow": "Timeline context",
       "title": "Storm And Survey Timeline",
       "summary": "Survey cadence, nearby forcing context, and validated-versus-live data treatment.",
       "status": "Client review screen"
@@ -90,7 +90,7 @@
     {
       "id": "status",
       "href": "/status",
-      "eyebrow": "Screen 6",
+      "eyebrow": "Monitoring readiness",
       "title": "Monitoring Readiness",
       "summary": "Public-data coverage, environmental context and project-specific layers required for operational status.",
       "status": "Client review screen"
@@ -98,7 +98,7 @@
     {
       "id": "provenance",
       "href": "/provenance",
-      "eyebrow": "Screen 7",
+      "eyebrow": "Evidence model",
       "title": "Provenance And Uncertainty",
       "summary": "Source, licence, CRS, quality and evidence boundaries for the displayed datasets.",
       "status": "Client review screen"

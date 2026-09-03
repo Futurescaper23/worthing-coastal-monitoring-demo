@@ -117,7 +117,6 @@ export function ImageEvidenceCard({
             sizes="(max-width: 1080px) 100vw, 50vw"
           />
           <div className={styles.mapEvidenceShade} />
-          <span className={styles.assetEvidenceBadge}>Interface demonstration — not project survey evidence</span>
 
           {item.markers?.map((marker) => (
             <span
@@ -174,7 +173,6 @@ export function ImageEvidenceCard({
       />
       <div className={styles.imageEvidenceShade} />
       <div className={styles.imageEvidenceScan} aria-hidden="true" />
-      <span className={styles.assetEvidenceBadge}>Interface demonstration — not project survey evidence</span>
 
       {!compact && item.markers?.map((marker) => (
         <span
@@ -268,9 +266,8 @@ export function IllustrationGallery({
       <div className={styles.assetDisclosure}>
         <strong>Visual note</strong>
         <span>
-          These images are representative presentation visuals created separately for this demonstrator. In a live
-          project they would be replaced with approved site photography, UAV outputs, survey imagery or client-supplied
-          project records.
+          Representative visuals only. A live project would use approved site photography, UAV outputs, survey imagery
+          or client-supplied project records.
         </span>
       </div>
       <div className={styles.illustrationGrid}>
@@ -279,7 +276,6 @@ export function IllustrationGallery({
             <div className={styles.illustrationMedia}>
               <Image src={item.image} alt={item.alt} fill className={styles.illustrationImage} sizes="(max-width: 1080px) 100vw, 33vw" />
               <div className={styles.illustrationShade} />
-              <span className={styles.assetEvidenceBadge}>Interface demonstration</span>
             </div>
             <div className={styles.illustrationCopy}>
               <p className={styles.eyebrow}>{eyebrow}</p>
@@ -318,7 +314,6 @@ export function ConditionComparison({
               sizes="(max-width: 1080px) 100vw, 50vw"
             />
             <div className={styles.conditionShade} />
-            <span className={styles.assetEvidenceBadge}>Interface demonstration — not project survey evidence</span>
             <span className={styles.conditionState}>{item.stateLabel}</span>
           </div>
           <div className={styles.conditionCopy}>
@@ -521,7 +516,7 @@ export function PlaceholderMap({
       <div className={styles.mapFooter}>
         <p>
           {scheme?.method ??
-            "Concept geometry for presentation only. A live project view would use verified public-source or client-approved scheme extents."}
+            "Review-grade concept geometry only. A live project view would use verified public-source or client-approved scheme extents."}
         </p>
         {scheme ? (
           <p>

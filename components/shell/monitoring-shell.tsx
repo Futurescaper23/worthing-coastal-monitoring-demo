@@ -74,7 +74,7 @@ const NAV_ICONS: Record<string, ReactNode> = {
 
 const SHELL_STAGE = {
   "/": {
-    eyebrow: "Full-frontage demonstrator",
+    eyebrow: "Worthing frontage",
     title: "Worthing Coastal Monitoring",
     summary:
       "A public-data-led monitoring demonstrator for the Worthing seafront, with one detailed proof area around Pier East and clear project-data boundaries.",
@@ -85,10 +85,10 @@ const SHELL_STAGE = {
       { label: "Focus", value: "Whole Worthing frontage", subtext: "Pier East proof nested inside" },
       { label: "Project data layer", value: projectMeta.criticalMissingLabel, subtext: "Client-supplied evidence layer" }
     ],
-    dock: "Interface demonstration — representative visual, not project survey evidence."
+    dock: "Public evidence is separated from client-supplied project data."
   },
   "/scheme": {
-    eyebrow: "Screen 1",
+    eyebrow: "Scheme extent",
     title: "Scheme Overview",
     summary:
       "Whole-frontage orientation, public evidence coverage and the client-supplied post-repair layer needed for measured change.",
@@ -99,10 +99,10 @@ const SHELL_STAGE = {
       { label: "Work areas", value: "10 public areas", subtext: "West-to-east frontage ordering" },
       { label: "Client layer", value: projectMeta.criticalMissingLabel, subtext: "Required for measured change" }
     ],
-    dock: "Interface demonstration — representative visual, not project survey evidence."
+    dock: "Approximate public-source geography; not engineering geometry."
   },
   "/bay/area-1-pier-east": {
-    eyebrow: "Screen 2",
+    eyebrow: "Proof area",
     title: "Pier East Proof Area",
     summary:
       "A recognisable detailed view around Worthing Pier East, separating public context from verified groyne-performance evidence.",
@@ -113,10 +113,10 @@ const SHELL_STAGE = {
       { label: "Evidence class", value: "Public context first", subtext: "Profile alignment still cautious" },
       { label: "Client layer", value: projectMeta.criticalMissingLabel, subtext: "Needed for measured change" }
     ],
-    dock: "Interface demonstration — representative visual, not project survey evidence."
+    dock: "Pier East is the first candidate area for measured project follow-up."
   },
   "/profiles": {
-    eyebrow: "Screen 3",
+    eyebrow: "Profile context",
     title: "Historical Profiles",
     summary:
       "Public CCO Worthing profile-report context and a cautious view of how cross-shore comparison would be presented.",
@@ -130,7 +130,7 @@ const SHELL_STAGE = {
     dock: "Profile values shown are demonstration values until raw CCO profile data is ingested and verified."
   },
   "/conditions": {
-    eyebrow: "Screen 4",
+    eyebrow: "Weather and tides",
     title: "Weather And Tides",
     summary:
       "Worthing-facing environmental context for survey windows, tide exposure and short-term conditions.",
@@ -144,7 +144,7 @@ const SHELL_STAGE = {
     dock: "Weather uses Open-Meteo archive data; tide data is shown only when the WorldTides provider is connected."
   },
   "/timeline": {
-    eyebrow: "Screen 5",
+    eyebrow: "Timeline context",
     title: "Timeline And Context",
     summary:
       "Repair timing, public survey chronology and nearby environmental context, kept separate from performance claims.",
@@ -158,7 +158,7 @@ const SHELL_STAGE = {
     dock: "Chronology gives context only; it does not prove repair performance."
   },
   "/status": {
-    eyebrow: "Screen 6",
+    eyebrow: "Monitoring readiness",
     title: "Monitoring Readiness",
     summary:
       "A readiness view showing public-data coverage, environmental context and the client-supplied layers needed for operational monitoring.",
@@ -172,7 +172,7 @@ const SHELL_STAGE = {
     dock: "Readiness view only; operational status requires verified project datasets."
   },
   "/provenance": {
-    eyebrow: "Screen 7",
+    eyebrow: "Evidence model",
     title: "Provenance And Uncertainty",
     summary:
       "Sources, dates, quality notes, evidence boundaries and project-specific data requirements for the live monitoring version.",
@@ -250,7 +250,6 @@ export function MonitoringShell({ activePath, children }: MonitoringShellProps) 
           </div>
 
           <div className={styles.summaryDock}>{stage.dock}</div>
-          <div className={styles.assetBadge}>Interface demonstration — not project survey evidence</div>
         </div>
       </section>
 

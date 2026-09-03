@@ -23,9 +23,9 @@ export default function TimelinePage() {
       <div className={styles.pageStack}>
         <Surface>
           <SectionHeading
-            eyebrow="Screen 5"
+            eyebrow="Timeline context"
             title="Storm, Tide And Survey Timeline"
-            summary="This screen explains repair timing, survey context and environmental conditions around the public evidence base without presenting chronology as performance proof."
+            summary="Repair timing, survey context and environmental conditions are shown around the public evidence base without presenting chronology as performance proof."
           />
         </Surface>
 
@@ -36,8 +36,8 @@ export default function TimelinePage() {
         <Surface>
           <SectionHeading
             eyebrow="Context imagery"
-            title="The chronology now feels tied to a real coastline"
-            summary="These visuals keep the chronology anchored in recognisable coastal conditions rather than reading as a detached list of dates."
+            title="Coastal context for the timeline"
+            summary="Representative visuals keep the chronology anchored in recognisable coastal conditions."
           />
           <div style={{ height: 18 }} />
           <IllustrationGallery items={timelineIllustrations} eyebrow="Timeline illustration" />

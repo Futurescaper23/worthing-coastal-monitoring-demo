@@ -71,9 +71,9 @@ export default function SchemePage() {
       <div className={styles.pageStack}>
         <Surface>
           <SectionHeading
-            eyebrow="Screen 1"
+            eyebrow="Scheme extent"
             title="Scheme Overview"
-            summary="This screen introduces the Worthing frontage, the public work-area sequence and the client-supplied post-repair layer that would strengthen future monitoring."
+            summary="This page introduces the Worthing frontage, the public work-area sequence and the client-supplied post-repair layer that would strengthen future monitoring."
           />
         </Surface>
 
@@ -100,8 +100,8 @@ export default function SchemePage() {
         <Surface>
           <SectionHeading
             eyebrow="Evidence model"
-            title="What this screen can and cannot support today"
-            summary="This keeps the overview honest while still making the demonstrator useful in a client conversation."
+            title="What the current evidence can and cannot support"
+            summary="This keeps the overview honest while still making the public-data review useful for project scoping."
           />
           <div style={{ height: 18 }} />
           <EvidencePanelGrid items={evidencePanels} />

@@ -16,9 +16,9 @@ export default function StatusPage() {
       <div className={styles.pageStack}>
         <Surface>
           <SectionHeading
-            eyebrow="Screen 6"
+            eyebrow="Monitoring readiness"
             title="Monitoring Readiness"
-            summary="This screen shows what can be reviewed from public evidence now, and which client-supplied layers are needed before it becomes an operational bay-status view."
+            summary="Public evidence can support the first review. Client-supplied survey layers are needed before this becomes an operational bay-status view."
           />
         </Surface>
 
@@ -34,9 +34,9 @@ export default function StatusPage() {
 
         <Surface>
           <SectionHeading
-            eyebrow="Readiness visuals"
-            title="Inspection-style imagery for the monitoring story"
-            summary="This image set gives the page an operational feel while clearly labelling the visuals as interface demonstrations."
+            eyebrow="Inspection context"
+            title="Operational monitoring inputs"
+            summary="Representative inspection imagery shows the type of visual record that would sit beside approved project data in a live monitoring product."
           />
           <div style={{ height: 18 }} />
           <IllustrationGallery items={statusIllustrations} eyebrow="Status illustration" />

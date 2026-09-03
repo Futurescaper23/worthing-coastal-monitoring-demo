@@ -57,10 +57,10 @@ export default async function BayPage({ params }: BayPageProps) {
           <div className={styles.heroGrid}>
             <ImageEvidenceCard
               item={{
-                eyebrow: "Proof-area stage",
-                title: "Put the proof area on screen as a place, not just a record",
+                eyebrow: "Pier East proof area",
+                title: "A recognisable frontage for measured follow-up",
                 summary:
-                  "This is the point where the presentation becomes specific and recognisable. The view shows where the monitoring story would connect to real survey and project records.",
+                  "Pier East gives the monitoring work a clear place reference, with public context ready now and client survey records identified as the layer needed for measured change.",
                 image: "/generated-images/worthing-pier-east-proof-illustration-v1.png",
                 alt: "Illustrative Worthing Pier East proof-area visual with monitoring callouts",
                 chips: ["Area 1 / Pier East", "Public evidence route", "Client UAV comparison layer"],
@@ -73,11 +73,11 @@ export default async function BayPage({ params }: BayPageProps) {
             />
 
             <div className={styles.heroPanel}>
-              <p className={styles.heroEyebrow}>Screen 2</p>
+              <p className={styles.heroEyebrow}>Pier East focus</p>
               <h2 className={styles.heroTitle}>{bayTitle}</h2>
               <p className={styles.heroSummary}>
-                This screen turns the whole scheme into a specific, recognisable proof area. It shows how public
-                context, profile evidence and client-supplied baseline data can come together.
+                This page turns the wider scheme into a specific, recognisable proof area. It shows how public context,
+                profile evidence and client-supplied baseline data can come together.
               </p>
               <div className={styles.pillRow}>
                 <span className={styles.pill}>Pier East proof area</span>
@@ -86,12 +86,12 @@ export default async function BayPage({ params }: BayPageProps) {
               </div>
               <div className={styles.heroTakeaways}>
                 <article className={styles.takeawayCard}>
-                  <strong>What improves here</strong>
-                  <p>The proof area reads as a visual destination rather than another text section.</p>
+                  <strong>Why Pier East</strong>
+                  <p>It is recognisable, close to the pier and suitable for a focused first monitoring trial.</p>
                 </article>
                 <article className={styles.takeawayCard}>
-                  <strong>What still matters</strong>
-                  <p>The image treatment points to future change evidence without inventing a verified result.</p>
+                  <strong>Evidence boundary</strong>
+                  <p>Measured post-repair change still needs the July 2026 UAV baseline and agreed thresholds.</p>
                 </article>
               </div>
             </div>
@@ -114,9 +114,9 @@ export default async function BayPage({ params }: BayPageProps) {
 
         <Surface>
           <SectionHeading
-            eyebrow="Proof-area visual set"
-            title="More image support for the bay-level conversation"
-            summary="This visual sequence helps the proof area feel tangible while the formal evidence layer remains tied to approved project imagery and measured datasets."
+            eyebrow="Pier East visual context"
+            title="Bay-level monitoring context"
+            summary="These representative views show the kind of site imagery that would sit beside approved project photography, UAV outputs and measured datasets in a live monitoring product."
           />
           <div style={{ height: 18 }} />
           <IllustrationGallery items={bayIllustrations} eyebrow="Bay illustration" />
@@ -143,7 +143,7 @@ export default async function BayPage({ params }: BayPageProps) {
           <SectionHeading
             eyebrow="Pier East brief"
             title="Why this bay works as the first proof"
-            summary="The value of this screen is to show a recognisable, defensible proof area and the evidence layers that would support stronger project-specific monitoring."
+            summary="Pier East provides a recognisable, defensible proof area and a clear route into stronger project-specific monitoring evidence."
           />
           <div style={{ height: 18 }} />
           <FactGrid items={proofFacts} />

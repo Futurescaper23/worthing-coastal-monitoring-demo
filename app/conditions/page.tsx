@@ -16,7 +16,7 @@ export default function ConditionsPage() {
       <div className={styles.pageStack}>
         <Surface>
           <SectionHeading
-            eyebrow="Screen 4"
+            eyebrow="Environmental context"
             title="Weather And Tides"
             summary="A Worthing-facing conditions view for weather, tide exposure, survey-window context and plain-English change-monitoring notes."
           />

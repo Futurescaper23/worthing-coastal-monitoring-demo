@@ -270,7 +270,7 @@ const illustrationLibrary = {
     image: "/generated-images/worthing-map-derived-frontage-overview-illustration-v1.png",
     alt: "Illustrative aerial-style view of the Worthing seafront frontage and pier",
     tags: ["Illustrative visual", "Whole frontage", "Client opening"],
-    note: "Generated from text prompts only for presentation context. Not survey evidence."
+    note: "Representative generated visual. Not survey evidence."
   },
   pierEastProof: {
     id: "pier-east-proof",
@@ -280,7 +280,7 @@ const illustrationLibrary = {
     image: "/generated-images/worthing-pier-east-proof-illustration-v1.png",
     alt: "Illustrative proof-area view near Worthing Pier East with repaired groyne frontage",
     tags: ["Illustrative visual", "Proof area", "Pier East"],
-    note: "Generated from text prompts only for presentation context. Not survey evidence."
+    note: "Representative generated visual. Not survey evidence."
   },
   seafrontMonitoring: {
     id: "seafront-monitoring",
@@ -290,7 +290,7 @@ const illustrationLibrary = {
     image: "/generated-images/worthing-seafront-monitoring-illustration-v1.png",
     alt: "Illustrative promenade view of the Worthing seafront with groynes and beach",
     tags: ["Illustrative visual", "Promenade", "Secondary support"],
-    note: "Generated from text prompts only for presentation context. Not survey evidence."
+    note: "Representative generated visual. Not survey evidence."
   },
   timelineContext: {
     id: "timeline-context",
@@ -300,7 +300,7 @@ const illustrationLibrary = {
     image: "/generated-images/worthing-timeline-context-illustration-v1.png",
     alt: "Illustrative Worthing seafront scene with changing weather and shoreline context",
     tags: ["Illustrative visual", "Timeline", "Environmental context"],
-    note: "Generated from text prompts only for presentation context. Not survey evidence."
+    note: "Representative generated visual. Not survey evidence."
   },
   profileMonitoring: {
     id: "profile-monitoring",
@@ -310,7 +310,7 @@ const illustrationLibrary = {
     image: "/generated-images/worthing-profile-monitoring-illustration-v1.png",
     alt: "Illustrative coastal monitoring setup with survey pole and tripod on the shingle beach",
     tags: ["Illustrative visual", "Profiles", "Monitoring method"],
-    note: "Generated from text prompts only for presentation context. Not survey evidence."
+    note: "Representative generated visual. Not survey evidence."
   },
   statusFrontage: {
     id: "status-frontage",
@@ -320,17 +320,17 @@ const illustrationLibrary = {
     image: "/generated-images/worthing-status-frontage-illustration-v1.png",
     alt: "Illustrative repaired frontage with groynes, rock toe protection and open sea",
     tags: ["Illustrative visual", "Status", "Operational tone"],
-    note: "Generated from text prompts only for presentation context. Not survey evidence."
+    note: "Representative generated visual. Not survey evidence."
   },
   provenanceObservation: {
     id: "provenance-observation",
     title: "Observation and provenance cue",
     summary:
-      "A restrained observation scene that supports the trust and evidence story behind the demonstrator.",
+      "A restrained observation scene that supports the provenance and evidence-boundary model.",
     image: "/generated-images/worthing-provenance-observation-illustration-v1.png",
     alt: "Illustrative shoreline observation setup on the Worthing seafront promenade",
     tags: ["Illustrative visual", "Provenance", "Observation"],
-    note: "Generated from text prompts only for presentation context. Not survey evidence."
+    note: "Representative generated visual. Not survey evidence."
   },
   groyneBeforeRepair: {
     id: "groyne-before-repair",

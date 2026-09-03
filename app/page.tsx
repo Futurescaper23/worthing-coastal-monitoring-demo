@@ -1,9 +1,7 @@
 import { MonitoringShell } from "@/components/shell/monitoring-shell";
 import {
-  IllustrationGallery,
   ReadinessGrid,
   SectionHeading,
-  ScreenGrid,
   StatGrid,
   Surface,
   VisualStoryPanel
@@ -11,10 +9,8 @@ import {
 import {
   datasetReadiness,
   heroStats,
-  homepageIllustrations,
   nextActions,
   projectMeta,
-  screenCards
 } from "@/lib/site-data";
 
 export const metadata = {
@@ -28,7 +24,7 @@ const homepageVisualStory = {
     eyebrow: "Frontage orientation",
     title: "Whole-frontage context",
     summary:
-      "The demonstrator starts with the full Worthing frontage so the pier, scheme ends and proof-area focus are clear before the detailed evidence view.",
+      "The Worthing frontage is shown first so the pier, scheme ends and Pier East focus are clear before the detailed evidence view.",
     image: "/generated-images/worthing-map-derived-frontage-overview-illustration-v1.png",
     alt: "Illustrative Worthing seafront overview with visual monitoring callouts",
     fit: "contain",
@@ -70,9 +66,9 @@ export default function HomePage() {
       <div style={{ display: "grid", gap: 20 }}>
         <Surface>
           <SectionHeading
-            eyebrow="Client preview"
-            title="Ready for the opening conversation"
-            summary={`This web version presents a public-data-led Worthing monitoring demonstrator in the style of the FutureScaping change-monitoring product. It is structured for an initial client review, with client-controlled survey layers clearly marked where they would strengthen the evidence. Last updated ${projectMeta.lastUpdated}.`}
+            eyebrow="Worthing monitoring"
+            title="Public evidence first, project evidence next"
+            summary={`A Worthing-specific monitoring demonstrator for the repaired frontage from Sea View Road to Brooklands. It shows the public evidence already available, the Pier East proof-area focus, and the client-supplied survey layers needed for measured post-repair monitoring. Last updated ${projectMeta.lastUpdated}.`}
           />
         </Surface>
 
@@ -80,9 +76,9 @@ export default function HomePage() {
 
         <Surface>
           <SectionHeading
-            eyebrow="Visual opening"
-            title="A recognisable Worthing monitoring journey"
-            summary="The page opens with the whole frontage, then moves into a proof area and the evidence layers that would support future change-monitoring decisions."
+            eyebrow="Worthing frontage"
+            title="Scheme extent and first proof area"
+            summary="The overview starts with the whole frontage, then moves into Pier East and the evidence layers that would support future change-monitoring decisions."
           />
           <div style={{ height: 18 }} />
           <VisualStoryPanel
@@ -90,26 +86,6 @@ export default function HomePage() {
             detail={homepageVisualStory.detail}
             insight={homepageVisualStory.insight}
           />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Representative visuals"
-            title="Representative visuals for the client-facing story"
-            summary="These visuals give the demonstrator a stronger sense of place while avoiding unapproved third-party photography or restricted project imagery."
-          />
-          <div style={{ height: 18 }} />
-          <IllustrationGallery items={homepageIllustrations} eyebrow="Illustrative generated asset" />
-        </Surface>
-
-        <Surface>
-          <SectionHeading
-            eyebrow="Client review screens"
-            title="Review Structure"
-            summary="Each screen supports a specific part of the client conversation: orientation, proof area, profiles, weather and tides, chronology, status and provenance."
-          />
-          <div style={{ height: 18 }} />
-          <ScreenGrid items={screenCards} />
         </Surface>
 
         <Surface>

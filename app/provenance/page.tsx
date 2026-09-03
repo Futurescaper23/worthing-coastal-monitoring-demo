@@ -24,9 +24,9 @@ export default function ProvenancePage() {
       <div className={styles.pageStack}>
         <Surface>
           <SectionHeading
-            eyebrow="Screen 7"
+            eyebrow="Evidence model"
             title="Data Provenance And Uncertainty"
-            summary="This screen makes trust visible. It shows where the current public evidence comes from, what it can support, and which project-specific layers would strengthen the live monitoring view."
+            summary="Source, date, licence, CRS and quality notes show what the current public evidence can support, and which project-specific layers would strengthen the live monitoring view."
           />
         </Surface>
 
@@ -34,7 +34,7 @@ export default function ProvenancePage() {
           <SectionHeading
             eyebrow="Why this matters"
             title="Source discipline and evidence boundaries"
-            summary="The value of this page is not just compliance language. It shows source discipline, evidence boundaries and a practical route from public context to client-specific monitoring."
+            summary="Source discipline, evidence boundaries and a practical route from public context to client-specific monitoring."
           />
           <div style={{ height: 18 }} />
           <FactGrid
